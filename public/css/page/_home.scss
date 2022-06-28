@@ -1,0 +1,118 @@
+.home_container {
+    padding-left: 67px;
+    padding-right: 23px;
+    position: relative;
+}
+.banner {
+    &-swiper {
+        &_text {
+            width: 30%;
+            background-color: #F5F3F0;
+            padding: 0 18px 70px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            h3 {
+                width: 100%;
+            }
+            p {
+                width: 100%;
+            }
+        }
+        &_pic {
+            width: 70%;
+            padding-bottom: calc(70% * 0.6853);
+            position: relative;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .swiper-pagination {
+        position: static;
+        margin-top: 22px;
+        line-height: 1;
+        text-align: left;
+        &-bullet {
+            background-color: #D1D1D1;
+            border-radius: 0;
+            height: 1px;
+            width: 190px;
+            opacity: 1;
+            &-active {
+                background-color: #000;
+            }
+        }
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            margin-top: 19px;
+            width: 24px;
+            cursor: pointer;
+        }
+    }
+}
+
+.quility {
+    margin-top: 90px;
+    img {
+        width: 100%;
+    }
+    &_right {
+        padding-left: 100px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-content: flex-end;
+        h3 {
+            width: 100%;
+        }
+        p {
+            width: 100%;
+        }
+        img {
+            margin-top: 36px;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .quility {
+        margin-top: 0;
+        &_text {
+            padding: 64px 24px 40px;
+        }
+        &_right {
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            .quility_text {
+                order: 2;
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                order: 1;
+                margin-top: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:575px) {
+    .quility {
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+            >div {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
