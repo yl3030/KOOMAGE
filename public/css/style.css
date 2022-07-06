@@ -13,6 +13,11 @@
   src: url(../font/Frutiger_Roman.woff) format("woff"), url(../font/Frutiger_Roman.otf) format("opentype");
 }
 
+@font-face {
+  font-family: FrutigerLight;
+  src: url(../font/Frutiger_Light.woff) format("woff"), url(../font/Frutiger_Light.otf) format("opentype");
+}
+
 body {
   font-family: FrutigerRoman;
   color: #1f1f1f;
@@ -60,6 +65,12 @@ header nav a.active {
   margin-bottom: 40px;
 }
 
+.container {
+  max-width: none;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .menu {
   width: 80px;
 }
@@ -82,6 +93,7 @@ main {
   font-size: 12px;
   letter-spacing: 0.1em;
   margin: 0;
+  font-family: FrutigerLight;
 }
 
 .footer {
@@ -186,6 +198,10 @@ main {
     padding-right: 0;
   }
   .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  header .container {
     padding-left: 20px;
     padding-right: 20px;
   }
