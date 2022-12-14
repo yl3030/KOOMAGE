@@ -10,200 +10,406 @@
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jrc6svk.css">
 </head>
-<body>
-    <header>
-        <div class="container d-flex align-items-center justify-content-between">
-            <a href="./index.html"><img class="logo" src="./public/img/logo.svg" alt=""></a>
-            <nav class="d-lg-block d-none">
-                <ul class="d-flex align-items-center">
-                    <li class="me-3"><a href="">SHIPPING TO</a></li>
-                    <li><a class="active" href="">CA</a></li>
+<body class="noscroll">
+    <nav class="menu">
+        <ul class="menu_main">
+            <li><a href="">Products</a></li>
+            <li><a href="">Stories</a></li>
+            <li><a href="">Sustainability</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+        <div class="menu_bottom d-flex">
+            <ul class="menu_second">
+                <li class="menu_second_item">
+                    <a class="menu_second_account">ACCOUNT</a>
+                    <div class="menu_third menu_third-m">
+                        <ul class="menu_third_inner">
+                            <li class="menu_third_item">
+                                <a class="menu_third_a">SIGN IN</a>
+                                <div class="menu_forth menu_forth-m">
+                                    <form action="" class="menu_forth_inner">
+                                        <input type="email" placeholder="EMAIL">
+                                        <input type="password" placeholder="PASSWORD">
+                                        <a href="">FORGET YOUR PASSWORD?</a>
+                                        <button>SIGN IN</button>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="menu_third_item"><a href="">REGISTER</a></li>
+                            <li class="menu_third_item"><a href="">REGION</a></li>
+                            <li class="menu_third_item"><a href="">CURRENCY</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">GIFT CARD</a></li>
+            </ul>
+            <div class="menu_third d-md-block d-none">
+                <ul class="menu_third_inner" id="menu_third_account">
+                    <li class="menu_third_item" data-form="#menu_forth_sigin"><a class="menu_third_a" data-form="#menu_forth_sigin">SIGN IN</a></li>
+                    <li class="menu_third_item"><a href="">REGISTER</a></li>
+                    <li class="menu_third_item"><a href="">REGION</a></li>
+                    <li class="menu_third_item"><a href="">CURRENCY</a></li>
                 </ul>
-            </nav>
-            <div class="d-lg-none d-flex align-items-center menu-m">
-                <p class="text-common m-0">BAG [0]</p>
-                <img src="./public/img/icon_menu-m.svg" alt="">
+            </div>
+            <div class="menu_forth d-md-block d-none">
+                <form action="" class="menu_forth_inner" id="menu_forth_sigin">
+                    <input type="email" placeholder="EMAIL">
+                    <input type="password" placeholder="PASSWORD">
+                    <a href="">FORGET YOUR PASSWORD?</a>
+                    <button>SIGN IN</button>
+                </form>
             </div>
         </div>
-    </header>
-    <div class="container d-flex container-main">
-        <div class="menu d-lg-block d-none">
-            <p class="text-common">BAG [0]</p>
-            <img src="./public/img/icon_menu.svg" alt="">
+    </nav>
+    <div class="header">
+        <a href="" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
+        <div class="header_nav">
+            <p class="sc d-md-none">
+                <span class="ca">CA</span>
+            </p>
+            <div class="header_bag">
+                BAG[<span class="header_bag_num">0</span>]
+            </div>
+            <div class="header_menu">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
         </div>
+    </div>
+    <ul class="sc_list">
+        <li data-abbr="BO">Botswana</li>
+        <li data-abbr="BO">Bouvet Island</li>
+        <li data-abbr="BR">Brazil</li>
+        <li data-abbr="BR">British Indian Ocean Territory</li>
+        <li data-abbr="BR">Brunei</li>
+        <li data-abbr="BU">Bulgaria</li>
+        <li data-abbr="BU">Burundi</li>
+        <li data-abbr="CA">Cambodia</li>
+        <li data-abbr="CA">Cameroon</li>
+        <li data-abbr="CA">Canada</li>
+        <li data-abbr="CA">Cape Verde</li>
+        <li data-abbr="CA">Cayman Islands</li>
+        <li data-abbr="CE">Central African Republic</li>
+        <li data-abbr="CH">Chad</li>
+        <li data-abbr="CH">Chile</li>
+        <li data-abbr="CH">China</li>
+    </ul>
+
+    <div class="container container-main">
+        <p class="sc d-md-block d-none">
+            <span class="">SHIPPING TO </span>
+            <span class="ca">CA</span>
+        </p>
         <main>
-            <div class="banner d-lg-block d-none">
-                <div class="swiper-container banner-swiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide d-flex flex-wrap">
-                          <div class="banner-swiper_text">
-                              <h3 class="title-common">ART IS ALL AROUND</h2>
-                              <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life practices of cultural aesthetics.</p>
-                          </div>
-                          <div class="banner-swiper_pic"><img src="./public/img/banner.png" alt=""></div>
-                      </div>
-                      <div class="swiper-slide d-flex flex-wrap">
-                        <div class="banner-swiper_text">
-                            <h3 class="title-common">ART IS ALL AROUND</h2>
-                            <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life practices of cultural aesthetics.</p>
-                        </div>
-                        <div class="banner-swiper_pic"><img src="./public/img/banner.png" alt=""></div>
-                      </div>
-                      <div class="swiper-slide d-flex flex-wrap">
-                        <div class="banner-swiper_text">
-                            <h3 class="title-common">ART IS ALL AROUND</h2>
-                            <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life practices of cultural aesthetics.</p>
-                        </div>
-                        <div class="banner-swiper_pic"><img src="./public/img/banner.png" alt=""></div>
-                      </div>
-                    </div>     
+            <div class="banner">
+                <div class="banner_text">
+                    <h1>NOTHING ELSE BUT ART</h1>
+                    <p>
+                        We are hoping to promote the habit of visual art <br>
+                        collecting, integrating art into our daily lives <br>
+                        delicately and profoundly, and furthermore fulfilling the life practices of cultural aesthetics.
+                    </p>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="banner_slider">
+                    <div class="swiper-container banner-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <div class="banner-swiper_pic">
+                                <img class="d-md-block d-none" src="./public/img/banner.png" alt="">
+                                <img class="d-md-none" src="./public/img/banner-m.png" alt="">
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="banner-swiper_pic">
+                                <img class="d-md-block d-none" src="./public/img/banner.png" alt="">
+                                <img class="d-md-none" src="./public/img/banner-m.png" alt="">
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="banner-swiper_pic">
+                                <img class="d-md-block d-none" src="./public/img/banner.png" alt="">
+                                <img class="d-md-none" src="./public/img/banner-m.png" alt="">
+                              </div>
+                          </div>
+                        </div>     
+                    </div>
+                </div>
             </div>
             <div class="quility">
                 <div class="row align-items-end">
                     <div class="col-lg-6">
-                        <img class="d-sm-block d-none" src="./public/img/quility-pic-left.png" alt="">
-                        <img class="d-sm-none d-block" src="./public/img/quility-pic-left-m.png" alt="">
-                        <div class="d-lg-none d-block quility_text">
+                        <img class="d-md-block d-none" src="./public/img/quility-pic-left.png" alt="">
+                        <img class="d-md-none d-block" src="./public/img/quility-pic-left-m.png" alt="">
+                        <!-- <div class="d-lg-none d-block quility_text">
                             <h3 class="title-common">ART IS ALL AROUND</h2>
                             <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life practices of cultural aesthetics.</p>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-lg-6">
                         <div class="quility_right">
                             <div class="quility_text">
                                 <h2 class="title-common">QUILITY</h2>
                                 <p class="text-common">Our goal is to ensure that your prints are the highest quality, The papers we print on have been tested by Wilhelm Research and are recognized as the gold standard in the industry. We feel a responsibility to be assured you’re getting the best print possible.</p>
+                                <a href="" class="learnmore">LEARN MORE</a>
                             </div>
                             <img src="./public/img/quility-pic-right.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-container product-list">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="product-list_item">
-                        <a href="./product-content.html">
-                            <div class="product-list_pic"><img src="./public/img/art-pic-1.png" alt=""></div>
-                            <div class="product-list_text">
-                                <h4>Title: Life is White<br>CAD 200</h4>
+            <div class="recently">
+                <div class="recently_title">
+                    <h2 class="title-common">Recently <br>Added</h2>
+                    <a href="" class="learnmore">VIEW ALL</a>
+                </div>
+                <div class="swiper-container product-list">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-content.html">
+                                <div class="product-list_pic"><img src="./public/img/product-1.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-list_save"><img src="./public/img/icon_love.svg" alt=""></div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="product-list_item">
-                        <a href="./product-content.html">
-                            <div class="product-list_pic"><img src="./public/img/art-pic-2.png" alt=""></div>
-                            <div class="product-list_text">
-                                <h4>Title: Life is White<br>CAD 200</h4>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-content.html">
+                                <div class="product-list_pic"><img src="./public/img/product-2.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-list_save"><img src="./public/img/icon_love.svg" alt=""></div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="product-list_item">
-                        <a href="./product-content.html">
-                            <div class="product-list_pic"><img src="./public/img/art-pic-3.png" alt=""></div>
-                            <div class="product-list_text">
-                                <h4>Title: Life is White<br>CAD 200</h4>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-content.html">
+                                <div class="product-list_pic"><img src="./public/img/product-3.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-list_save"><img src="./public/img/icon_love.svg" alt=""></div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="product-list_item">
-                        <a href="./product-content.html">
-                            <div class="product-list_pic"><img src="./public/img/art-pic-4.png" alt=""></div>
-                            <div class="product-list_text">
-                                <h4>Title: Life is White<br>CAD 200</h4>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-content.html">
+                                <div class="product-list_pic"><img src="./public/img/product-4.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-list_save"><img src="./public/img/icon_love.svg" alt=""></div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="product-list_item">
-                        <a href="./product-content.html">
-                            <div class="product-list_pic"><img src="./public/img/art-pic-5.png" alt=""></div>
-                            <div class="product-list_text">
-                                <h4>Title: Life is White<br>CAD 200</h4>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-content.html">
+                                <div class="product-list_pic"><img src="./public/img/product-5.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-list_save"><img src="./public/img/icon_love.svg" alt=""></div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="product-list_item">
-                        <a href="./product-content.html">
-                            <div class="product-list_pic"><img src="./public/img/art-pic-6.png" alt=""></div>
-                            <div class="product-list_text">
-                                <h4>Title: Life is White<br>CAD 200</h4>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-content.html">
+                                <div class="product-list_pic"><img src="./public/img/product-6.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
                             </div>
-                        </a>
-                        <div class="product-list_save"><img src="./public/img/icon_love.svg" alt=""></div>
-                    </div>
-                  </div>
-                </div>     
+                        </div>
+                      </div>
+                    </div>     
+                </div>
+
             </div>
-            <footer class="footer d-flex flex-wrap align-items-end justify-content-between">
-                <div class="footer_left">
-                    <ul class="d-flex">
-                        <li>
-                            <h5>SUPPORT</h5>
-                            <ul>
-                                <li><a href="">Size Guide</a></li>
-                                <li><a href="">Shipping</a></li>
-                                <li><a href="">Returns</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h5>INFORMATION</h5>
-                            <ul>
-                                <li><a href="">Rewards</a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Terms & Privacy</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="footer_social d-lg-none d-flex justify-content-end">
-                        <a href=""><img src="./public/img/icon_ig.svg" alt=""></a>
-                        <a href=""><img src="./public/img/icon_twitter.svg" alt=""></a>
+
+            <div class="sm">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="sm_item sg">
+                            <img class="sm_item_pic" src="./public/img/guarantee.png" alt="">
+                            <div class="sm_item_text">
+                                <h2 class="title-common">Service Guarantee</h2>
+                                <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life and furthermore fulfilling the life practices of cultural aesthetics .</p>
+                                <a href="" class="learnmore">LEARN MORE</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-lg-none d-flex justify-content-between">
-                        <a href="">Contact</a>
-                        <div>
-                            <span>Site by Dea Creative</span>
-                            <span>© 2022 KOOMAGE</span>
+                    <div class="col-lg-6">
+                        <div class="sm_item mva">
+                            <img class="sm_item_pic" src="./public/img/meet.png" alt="">
+                            <div class="sm_item_text">
+                                <h2 class="title-common">Meet Visual Art</h2>
+                                <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life and furthermore fulfilling the life practices of cultural aesthetics .</p>
+                                <a href="" class="learnmore">LEARN MORE</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="footer_right">
-                    <form action="">
-                        <label class="d-block ms-2" for="">Fast delivery worldwide with DHL</label>
-                        <input type="text" placeholder="join the newsletter">
-                        <p class="ms-2">Sign up to the newsletter and receive $10 off your first purchase</p>
-                    </form>
-                    <div class="footer_social d-lg-flex d-none justify-content-end">
-                        <a href=""><img src="./public/img/icon_ig.svg" alt=""></a>
-                        <a href=""><img src="./public/img/icon_twitter.svg" alt=""></a>
+            </div>
+
+            <footer class="footer">
+                <div class="footer_top d-flex flex-wrap align-items-end justify-content-between">
+                    <div class="footer_left">
+                        <ul class="d-flex">
+                            <li>
+                                <h5>SUPPORT</h5>
+                                <ul>
+                                    <li><a href="">Size Guide</a></li>
+                                    <li><a href="">Shipping</a></li>
+                                    <li><a href="">Returns</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h5>INFORMATION</h5>
+                                <ul>
+                                    <li><a href="">Rewards</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Terms & Privacy</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="d-lg-flex d-none justify-content-between">
-                        <a href="">Contact</a>
-                        <div>
-                            <span>Site by Dea Creative</span>
-                            <span>© 2022 KOOMAGE</span>
+                    <div class="footer_right">
+                        <form action="">
+                            <label class="d-block" for="">Fast delivery worldwide with DHL</label>
+                            <div class="footer_join">
+                                <div class="footer_join_mask"></div>
+                                <input type="text" class="footer_join_input" placeholder="join the newsletter">
+                                <div class="footer_join_send">
+                                    <svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.51 7.36"><defs><style>.cls-1{fill:#5c5c5c;fill-rule:evenodd;}</style></defs><g id="_圖層_1-2"><path class="cls-1" d="M5.89,.02l3.6,3.6s.02,.09,0,.14l-3.6,3.57s-.09,.05-.14,0l-.45-.45,2.82-2.84H.4c-.21,0-.4-.17-.4-.38H0c0-.24,.19-.4,.4-.4h7.64L5.3,.49,5.75,.02s.12-.02,.14,0h0Z"/></g></svg>
+                                </div>
+                                <div class="footer_join_thank">THANK YOU FOR SUBSCRIBING</div>
+                            </div>
+                            <!-- <input type="text" placeholder="join the newsletter"> -->
+                            <p class="text-end">Sign up to the newsletter and receive $10 off<br>your first purchase</p>
+                        </form>
+                        <div class="footer_tran">
+                            <h5>SAFE TRANSACTIONS</h5>
+                            <div class="footer_tran_pic">
+                                <img src="./public/img/tran-1.svg" alt="">
+                                <img src="./public/img/tran-2.svg" alt="">
+                                <img src="./public/img/tran-3.svg" alt="">
+                                <img src="./public/img/tran-4.svg" alt="">
+                                <img src="./public/img/tran-5.svg" alt="">
+                                <img src="./public/img/tran-6.svg" alt="">
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="footer_bottom d-flex flex-wrap align-items-end justify-content-between">
+                    <div class="footer_copy">COPYRIGHT© KOOMAGE</div>
+                    <div class="d-flex footer_contact">
+                        <ul class="footer_link d-flex">
+                            <li><a href="">Region</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                        <ul class="footer_social d-flex">
+                            <li><a href=""><img src="./public/img/twitter.svg" alt=""></a></li>
+                            <li><a href=""><img src="./public/img/ig.svg" alt=""></a></li>
+                            <li><a href=""><img src="./public/img/yt.svg" alt=""></a></li>
+                        </ul>
                     </div>
                 </div>
             </footer>
         </main>
     </div>
+
+    <div class="init active"></div>
+    <img class="init_pic" src="./public/img/init.svg" alt="">
 
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
@@ -214,16 +420,8 @@
         var swiper = new Swiper(".banner-swiper", {
             slidesPerView: 1,
             loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
             speed: 1000,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        })
+        });
         var swiper = new Swiper(".product-list", {
             slidesPerView: 1.3,
             slidesPerColumn: 2,
@@ -235,7 +433,7 @@
                 clickable: true,
             },
             breakpoints: {
-                576: {
+                768: {
                     slidesPerView: 2,
                     slidesPerColumn: 3,
                 },

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOOMAGE</title>
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jrc6svk.css">
+</head>
+<body>
+    <nav class="menu">
+        <ul class="menu_main">
+            <li><a href="">Products</a></li>
+            <li><a href="">Stories</a></li>
+            <li><a href="">Sustainability</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+        <div class="menu_bottom d-flex">
+            <ul class="menu_second">
+                <li class="menu_second_item">
+                    <a class="menu_second_account">ACCOUNT</a>
+                    <div class="menu_third menu_third-m">
+                        <ul class="menu_third_inner">
+                            <li class="menu_third_item">
+                                <a class="menu_third_a">SIGN IN</a>
+                                <div class="menu_forth menu_forth-m">
+                                    <form action="" class="menu_forth_inner">
+                                        <input type="email" placeholder="EMAIL">
+                                        <input type="password" placeholder="PASSWORD">
+                                        <a href="">FORGET YOUR PASSWORD?</a>
+                                        <button>SIGN IN</button>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="menu_third_item"><a href="">REGISTER</a></li>
+                            <li class="menu_third_item"><a href="">REGION</a></li>
+                            <li class="menu_third_item"><a href="">CURRENCY</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">GIFT CARD</a></li>
+            </ul>
+            <div class="menu_third d-md-block d-none">
+                <ul class="menu_third_inner" id="menu_third_account">
+                    <li class="menu_third_item" data-form="#menu_forth_sigin"><a class="menu_third_a" data-form="#menu_forth_sigin">SIGN IN</a></li>
+                    <li class="menu_third_item"><a href="">REGISTER</a></li>
+                    <li class="menu_third_item"><a href="">REGION</a></li>
+                    <li class="menu_third_item"><a href="">CURRENCY</a></li>
+                </ul>
+            </div>
+            <div class="menu_forth d-md-block d-none">
+                <form action="" class="menu_forth_inner" id="menu_forth_sigin">
+                    <input type="email" placeholder="EMAIL">
+                    <input type="password" placeholder="PASSWORD">
+                    <a href="">FORGET YOUR PASSWORD?</a>
+                    <button>SIGN IN</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        <a href="" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
+        <div class="header_nav">
+            <p class="sc d-md-none">
+                <span class="ca">CA</span>
+            </p>
+            <div class="header_bag">
+                BAG[<span class="header_bag_num">0</span>]
+            </div>
+            <div class="header_menu">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
+        </div>
+    </div>
+    <ul class="sc_list">
+        <li data-abbr="BO">Botswana</li>
+        <li data-abbr="BO">Bouvet Island</li>
+        <li data-abbr="BR">Brazil</li>
+        <li data-abbr="BR">British Indian Ocean Territory</li>
+        <li data-abbr="BR">Brunei</li>
+        <li data-abbr="BU">Bulgaria</li>
+        <li data-abbr="BU">Burundi</li>
+        <li data-abbr="CA">Cambodia</li>
+        <li data-abbr="CA">Cameroon</li>
+        <li data-abbr="CA">Canada</li>
+        <li data-abbr="CA">Cape Verde</li>
+        <li data-abbr="CA">Cayman Islands</li>
+        <li data-abbr="CE">Central African Republic</li>
+        <li data-abbr="CH">Chad</li>
+        <li data-abbr="CH">Chile</li>
+        <li data-abbr="CH">China</li>
+    </ul>
+
+    <div class="container container-main">
+        <p class="sc d-md-block d-none">
+            <span class="">SHIPPING TO </span>
+            <span class="ca">CA</span>
+        </p>
+        <main>
+            <div class="d-flex flex-wrap product_detail">
+                <div class="product_main">
+                    <div class="product_detail_pic vertiSlider">
+                        <div class="swiper-container product_detail_slider">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="product_detail_slider_pic">
+                                    <img src="./public/img/product-7.png" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="product_detail_slider_pic">
+                                    <img src="./public/img/product-7.png" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="product_detail_slider_pic">
+                                    <img src="./public/img/product-7.png" alt="">
+                                </div>
+                              </div>
+                            </div>     
+                        </div>
+                        <div class="product_detail_slider_pagi"></div>
+                        <div class="product_detail_slider_cross"><img src="./public/img/icon-cross.svg" alt=""></div>
+                    </div>
+                    <!-- <img class="product_main_pic d-sm-block d-none" src="./public/img/art-pic-1.png" alt="">
+                    <div class="product_main_pic-m d-sm-none d-block"><img src="./public/img/art-pic-m.png" alt=""></div> -->
+                    <div class="d-lg-block d-none product_like">
+                        <h2 class="title-common">YOU MAY ALSO LIKE</h2>
+                        <div class="swiper-container product_like_slider product_like_slider-pc">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="product_like_pic">
+                                    <img src="./public/img/product-1.png" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="product_like_pic">
+                                    <img src="./public/img/product-2.png" alt="">
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="product_like_pic">
+                                    <img src="./public/img/product-3.png" alt="">
+                                </div>
+                              </div>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="product_intro">
+                    <div class="product_intro_title d-flex justify-content-between align-items-end">
+                        <div>
+                            <p>title</p>
+                            <h1>KO #02</h1>
+                        </div>
+                        <div class="collect">
+                            <div class="collect_text">add to collection</div>
+                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_38_6)">
+                                <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_38_6">
+                                <rect width="14.12" height="12.48" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="product_intro_text">
+                        We use Hahnemuhle Photo Rag® 308 paper which is a white, 100% cotton paper with a smooth surface texture. This paper is for display purposes and exhibitions. With its premium matt inkjet coating Photo Rag meets the highest industry standards regarding density, colour gamut, colour graduation and image sharpness.
+                    </p>
+                    <div class="product_change">
+                        <div class="d-flex align-items-end justify-content-end product_intro_price">
+                            <span class="unit">CA$</span>
+                            <span class="product_change_price"> 250.00</span>
+                        </div>
+                        <div class="product_intro_change">
+                            <div class="product_intro_change_title">change currency</div>
+                            <ul class="product_intro_change_list">
+                                <li>AUD</li>
+                                <li>CAD</li>
+                                <li>EUR</li>
+                                <li>GBP</li>
+                                <li>HKD</li>
+                                <li>JPY</li>
+                                <li>NZD</li>
+                                <li>RMB</li>
+                                <li>SGD</li>
+                                <li>USD</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="product_spec">
+                        <li class="product_spec_li">
+                            <div class="product_spec_item">
+                                <span class="product_spec_item_left">select size</span>
+                                <div class="product_spec_item_right">
+                                    <p class="product_spec_chosen m-0 me-1"></p>
+                                    <div class="product_spec_icon">
+                                        <div class="bar vert"></div>
+                                        <div class="bar hori"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_spec_list">
+                                <li class="product_spec_list_item" data-price="290">W88cm*H60cm</li>
+                                <li class="product_spec_list_item" data-price="240">W70cm*H48cm</li>
+                                <li class="product_spec_list_item" data-price="180">W54cm*H37cm</li>
+                                <li class="product_spec_list_item" data-price="120">W35cm*H24cm</li>
+                            </ul>
+                        </li>
+                        <li class="product_spec_li">
+                            <div class="product_spec_item">
+                                <span class="product_spec_item_left">select mounting</span>
+                                <div class="product_spec_item_right">
+                                    <p class="product_spec_chosen m-0 me-1"></p>
+                                    <div class="product_spec_icon">
+                                        <div class="bar vert"></div>
+                                        <div class="bar hori"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_spec_list">
+                                <li class="product_spec_list_item">W88cm*H60cm</li>
+                                <li class="product_spec_list_item">W70cm*H48cm</li>
+                                <li class="product_spec_list_item">W54cm*H37cm</li>
+                                <li class="product_spec_list_item">W35cm*H24cm</li>
+                            </ul>
+                        </li>
+                        <li class="product_spec_li">
+                            <div class="product_spec_item">
+                                <span class="product_spec_item_left">select frame</span>
+                                <div class="product_spec_item_right">
+                                    <p class="product_spec_chosen m-0 me-1"></p>
+                                    <div class="product_spec_icon">
+                                        <div class="bar vert"></div>
+                                        <div class="bar hori"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_spec_list">
+                                <li class="product_spec_list_item">W88cm*H60cm</li>
+                                <li class="product_spec_list_item">W70cm*H48cm</li>
+                                <li class="product_spec_list_item">W54cm*H37cm</li>
+                                <li class="product_spec_list_item">W35cm*H24cm</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn-addtocart">ADD TO CART</button>
+                    <!-- <p class="mb-40 d-lg-none d-block">
+                        We use Hahnemuhle Photo Rag® 308 paper which is a white, 100% cotton paper with a smooth surface texture. This paper is for display purposes and exhibitions. With its premium matt inkjet coating Photo Rag meets the highest industry standards regarding density, colour gamut, colour graduation and image sharpness.
+                    </p> -->
+                    <ul class="product_tab-m d-sm-none d-block">
+                        <li>
+                            <div class="product_tab-m_title">
+                                <span>frame describtion</span>
+                                <div class="product_tab-m_icon">
+                                    <img class="normal" src="./public/img/icon_plus.svg" alt="">
+                                    <img class="active" src="./public/img/icon_minus.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="product_tab-m_content">
+                                <p>International delivery via DHL.</p>
+                                <p>We dispatch all orders within 7-9 business days.</p>
+                                <p>Canada 1-2 business days, </p>
+                                <p>US 2-3 business days, </p>
+                                <p>Europe 3-5 business days, </p>
+                                <p>Asina 4-7 business days, </p>
+                                <p>Rest of the world 5-9 business days </p>
+                                <p>Some countries, remote cities, or islands may have </p>
+                                <p>longer delivery times.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product_tab-m_title">
+                                <span>shipping information</span>
+                                <div class="product_tab-m_icon">
+                                    <img class="normal" src="./public/img/icon_plus.svg" alt="">
+                                    <img class="active" src="./public/img/icon_minus.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="product_tab-m_content">
+                                <p>International delivery via DHL.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="product_tab d-sm-block d-none">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="pills-frame-tab" data-bs-toggle="pill" data-bs-target="#pills-frame" type="button" role="tab" aria-controls="pills-frame" aria-selected="true">frame describtion</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-shipping-tab" data-bs-toggle="pill" data-bs-target="#pills-shipping" type="button" role="tab" aria-controls="pills-shipping" aria-selected="false">shipping information</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-frame" role="tabpanel" aria-labelledby="pills-frame-tab">  
+                                <p>International delivery via DHL.</p>
+                                <p>We dispatch all orders within 7-9 business days.</p>
+                                <p>Canada 1-2 business days, </p>
+                                <p>US 2-3 business days, </p>
+                                <p>Europe 3-5 business days, </p>
+                                <p>Asina 4-7 business days, </p>
+                                <p>Rest of the world 5-9 business days </p>
+                                <p>Some countries, remote cities, or islands may have </p>
+                                <p>longer delivery times.</p>
+                            </div>
+                            <div class="tab-pane fade" id="pills-shipping" role="tabpanel" aria-labelledby="pills-shipping-tab">
+                                <p>International delivery via DHL.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-lg-none d-block product_like">
+                <h2 class="title-common">YOU MAY ALSO LIKE</h2>
+                <div class="swiper-container product_like_slider-m">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="product_like_pic">
+                            <img src="./public/img/product-1.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product_like_pic">
+                            <img src="./public/img/product-2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product_like_pic">
+                            <img src="./public/img/product-3.png" alt="">
+                        </div>
+                      </div>
+                    </div>     
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer_top d-flex flex-wrap align-items-end justify-content-between">
+                    <div class="footer_left">
+                        <ul class="d-flex">
+                            <li>
+                                <h5>SUPPORT</h5>
+                                <ul>
+                                    <li><a href="">Size Guide</a></li>
+                                    <li><a href="">Shipping</a></li>
+                                    <li><a href="">Returns</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h5>INFORMATION</h5>
+                                <ul>
+                                    <li><a href="">Rewards</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Terms & Privacy</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_right">
+                        <form action="">
+                            <label class="d-block" for="">Fast delivery worldwide with DHL</label>
+                            <div class="footer_join">
+                                <div class="footer_join_mask"></div>
+                                <input type="text" class="footer_join_input" placeholder="join the newsletter">
+                                <div class="footer_join_send">
+                                    <svg id="_圖層_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.51 7.36"><defs><style>.cls-1{fill:#5c5c5c;fill-rule:evenodd;}</style></defs><g id="_圖層_1-2"><path class="cls-1" d="M5.89,.02l3.6,3.6s.02,.09,0,.14l-3.6,3.57s-.09,.05-.14,0l-.45-.45,2.82-2.84H.4c-.21,0-.4-.17-.4-.38H0c0-.24,.19-.4,.4-.4h7.64L5.3,.49,5.75,.02s.12-.02,.14,0h0Z"/></g></svg>
+                                </div>
+                                <div class="footer_join_thank">THANK YOU FOR SUBSCRIBING</div>
+                            </div>
+                            <!-- <input type="text" placeholder="join the newsletter"> -->
+                            <p class="text-end">Sign up to the newsletter and receive $10 off<br>your first purchase</p>
+                        </form>
+                        <div class="footer_tran">
+                            <h5>SAFE TRANSACTIONS</h5>
+                            <div class="footer_tran_pic">
+                                <img src="./public/img/tran-1.svg" alt="">
+                                <img src="./public/img/tran-2.svg" alt="">
+                                <img src="./public/img/tran-3.svg" alt="">
+                                <img src="./public/img/tran-4.svg" alt="">
+                                <img src="./public/img/tran-5.svg" alt="">
+                                <img src="./public/img/tran-6.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom d-flex flex-wrap align-items-end justify-content-between">
+                    <div class="footer_copy">COPYRIGHT© KOOMAGE</div>
+                    <div class="d-flex footer_contact">
+                        <ul class="footer_link d-flex">
+                            <li><a href="">Region</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                        <ul class="footer_social d-flex">
+                            <li><a href=""><img src="./public/img/twitter.svg" alt=""></a></li>
+                            <li><a href=""><img src="./public/img/ig.svg" alt=""></a></li>
+                            <li><a href=""><img src="./public/img/yt.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="./public/js/common.js"></script>
+
+    <script>
+        var swiper1 = new Swiper(".product_detail_slider", {
+            slidesPerView: 1,
+            loop: true,
+            speed: 1000,
+            direction: "vertical",
+            pagination: {
+                el: ".product_detail_slider_pagi",
+                clickable: true,
+            },
+        });
+        var swiper3 = new Swiper(".product_like_slider-m", {
+            slidesPerView: 1.5,
+            speed: 1000,
+            spaceBetween: 13,
+            observeParents:true,
+            observer:true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+            }
+        });
+        var swiper2 = new Swiper(".product_like_slider-pc", {
+            slidesPerView: 3,
+            speed: 1000,
+            spaceBetween: 13,
+            observeParents:true,
+            observer:true,
+        });
+    </script>
+
+</body>
+</html>
