@@ -121,7 +121,7 @@ input, button {
     &_menu {
         margin-top: 20px;
         width: 30px;
-        height: 20px;
+        height: 21px;
         position: relative;
         cursor: pointer;
         .bar {
@@ -137,7 +137,8 @@ input, button {
             &.middle {
                 width: 16px;
                 left: 2px;
-                top: 50%;
+                // top: 50%;
+                top: 10px;
             }
             &.bottom {
                 width: 100%;
@@ -146,9 +147,16 @@ input, button {
             }
         }
         &:hover {
+            // .bar {
+            //     width: 100% !important;
+            //     left: 0 !important;
+            // }
             .bar {
-                width: 100% !important;
-                left: 0 !important;
+                width: 20px;
+                top: 10px;
+                left: 0;
+                // left: 50%;
+                // transform: translateX(-50%);
             }
         }
         &.active {
@@ -173,7 +181,8 @@ input, button {
     }
     @media screen and (max-width: 767px) {
         width: 100%;
-        height: 95px;
+        // height: 95px;
+        height: 75px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -244,7 +253,7 @@ input, button {
                 position: absolute;
                 content: "";
                 width: 100%;
-                bottom: 2px;
+                bottom: 3px;
                 background-color: $common-text;
                 height: 1px;
                 left: 0;
@@ -354,10 +363,12 @@ input, button {
                 border-bottom: 1px solid #333333;
                 padding: 5px 0;
                 margin-bottom: 10px;
+                font-size: 13px;
                 &::placeholder {
                     // font-family: FrutigerLightCn;
                     color: $gray-a8;
                     font-size: 12px;
+                    letter-spacing: 0.05em;
                 }
             }
             a {
@@ -376,6 +387,25 @@ input, button {
                 height: 25px;
                 margin: 0 0 0 auto;
                 display: block;
+                position: relative;
+                transition: 0.3s;
+                &:hover {
+                    color: #fff;
+                    &::after {
+                        width: 100%;
+                    }
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    transition: 0.3s;
+                    width: 0;
+                    height: 100%;
+                    background-color: $common-text;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
             }
             &.active {
                 opacity: 1;
@@ -445,29 +475,15 @@ input, button {
 .container {
     max-width: inherit;
     padding-left: 40px;
-    // padding-right: 40px;
     padding: 0;
 }
 
 .container-main {
     padding-left: 163px;
     @media screen and (max-width: 767px) {
-        padding-top: 95px;
+        padding-top: 75px;
         padding-left: 0;
     }
-}
-
-// .menu {
-//     width: 80px;
-//     &-m {
-//         img {
-//             margin-left: 20px;
-//         }
-//     }
-// }
-
-main {
-    // width: calc(100% - 80px);
 }
 
 .sc {
@@ -480,7 +496,7 @@ main {
     span {
         font-family: PostGroteskBook;
         font-size: 12px;
-        color: $gray-5c;
+        color: $gray-80;
         display: inline-flex;
         align-items: center;
         height: 100%;
@@ -494,15 +510,16 @@ main {
         position: fixed;
         height: calc(100vh - 50px);
         width: 300px;
-        top: 50px;
+        top: 49px;
         right: 28px;
-        z-index: 3;
+        z-index: 8;
         background-color: #e7e7e9;
         cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
+        display: none;
+        // opacity: 0;
+        // visibility: hidden;
         transform: translateX(20px);
-        transition: 0.3s;
+        // transition: 0.3s;
         overflow-y: auto;
         li {
             padding: 3px 10px;
@@ -511,11 +528,11 @@ main {
                 background-color: #c2c2c2;
             }
         }
-        &.active {
-            opacity: 1;
-            visibility: visible;
-            transform: none;
-        }
+        // &.active {
+        //     opacity: 1;
+        //     visibility: visible;
+        //     transform: none;
+        // }
     }
     @media screen and (max-width: 767px) {
         padding: 0;
@@ -539,6 +556,11 @@ main {
         font-size: 24px;
         margin-bottom: 10px;
     }
+    @media screen and (max-width: 575px) {
+        &-common {
+            letter-spacing: 0.03em;
+        }
+    }
 }
 
 .text {
@@ -553,21 +575,30 @@ main {
 .learnmore {
     font-family: PostGroteskLight;
     color: $second-text;
-    // align-items: center;
-    // justify-content: center;
-    // display: flex;
-    // width: 103px;
-    // height: 25px;
     display: block;
     width: fit-content;
-    padding: 5px 17px;
+    padding: 5px 17px 4px;
     border: 1px solid $common-text;
     margin-top: 15px;
     font-size: 12px;
     transition: 0.3s;
+    position: relative;
     &:hover {
-        background-color: $common-text;
         color: #fff;
+        &::after {
+            width: 100%;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        transition: 0.3s;
+        width: 0;
+        height: 100%;
+        background-color: $common-text;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
 }
 
@@ -608,6 +639,11 @@ main {
                         &::after {
                             width: 100%;
                         }
+                    }
+                }
+                >ul {
+                    >li {
+                        margin-bottom: 3px;
                     }
                 }
             }
@@ -801,7 +837,8 @@ main {
         }
     }
     @media screen and (max-width:991px) {
-        padding-top: 86px;
+        // padding-top: 86px;
+        padding-top: 43px;
         &_left {
             width: 100%;
             order: 2;
@@ -814,7 +851,8 @@ main {
                 margin-bottom: 34px;
                 label {
                     text-align: left;
-                    margin-bottom: 44px;
+                    // margin-bottom: 44px;
+                    margin-bottom: 22px;
                 }
                 p {
                     text-align: left !important;
@@ -848,7 +886,8 @@ main {
             width: 100%;
             order: 1;
             justify-content: space-between;
-            margin-bottom: 40px;
+            // margin-bottom: 40px;
+            margin-bottom: 20px;
         }
     }
     @media screen and (max-width:767px) {
@@ -860,6 +899,7 @@ main {
 .collect {
     margin-bottom: 3px;
     position: relative;
+    width: 15px;
     &_text {
         position: absolute;
         color: $gray-b2;
@@ -896,8 +936,35 @@ main {
     }
     &.active {
         .collect_text {
-            width: 95px;
+            animation: collect 4s;
         }
+    }
+}
+
+@keyframes collect {
+    0% {
+        width: 0;
+        display: block;
+    }
+    20% {
+        width: 95px;
+        display: block;
+    }
+    40% {
+        width: 95px;
+        display: block;
+    }
+    60% {
+        width: 95px;
+        display: block;
+    }
+    80% {
+        width: 95px;
+        display: block;
+    }
+    100% {
+        width: 0;
+        display: none;
     }
 }
 
@@ -908,7 +975,6 @@ main {
     main {
         width: 100%;
     }
-    // .footer
 }
 
 @media screen and (max-width:575px) {

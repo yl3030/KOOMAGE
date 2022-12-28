@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jrc6svk.css">
 </head>
-<body class="noscroll">
+<body>
     <nav class="menu">
         <ul class="menu_main">
             <li><a href="">Products</a></li>
@@ -63,13 +63,13 @@
         </div>
     </nav>
     <div class="header">
-        <a href="" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
+        <a href="./index.html" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
         <div class="header_nav">
             <p class="sc d-md-none">
                 <span class="ca">CA</span>
             </p>
             <div class="header_bag">
-                BAG[<span class="header_bag_num">0</span>]
+                BAG [<span class="header_bag_num">0</span>]
             </div>
             <div class="header_menu">
                 <div class="bar top"></div>
@@ -79,24 +79,48 @@
         </div>
     </div>
     <ul class="sc_list">
-        <li data-abbr="BO">Botswana</li>
-        <li data-abbr="BO">Bouvet Island</li>
-        <li data-abbr="BR">Brazil</li>
-        <li data-abbr="BR">British Indian Ocean Territory</li>
-        <li data-abbr="BR">Brunei</li>
-        <li data-abbr="BU">Bulgaria</li>
-        <li data-abbr="BU">Burundi</li>
-        <li data-abbr="CA">Cambodia</li>
-        <li data-abbr="CA">Cameroon</li>
+        <li data-abbr="AU">Australia</li>
+        <li data-abbr="AT">Austria</li>
+        <li data-abbr="BE">Belgium</li>
+        <li data-abbr="BT">Bhutan</li>
         <li data-abbr="CA">Canada</li>
-        <li data-abbr="CA">Cape Verde</li>
-        <li data-abbr="CA">Cayman Islands</li>
-        <li data-abbr="CE">Central African Republic</li>
-        <li data-abbr="CH">Chad</li>
-        <li data-abbr="CH">Chile</li>
-        <li data-abbr="CH">China</li>
+        <li data-abbr="CN">China</li>
+        <li data-abbr="CZ">Czech</li>
+        <li data-abbr="FI">Finland</li>
+        <li data-abbr="DE">Germany</li>
+        <li data-abbr="GR">Greece</li>
+        <li data-abbr="HK">Hong Kong</li>
+        <li data-abbr="IS">Iceland</li>
+        <li data-abbr="IN">India</li>
+        <li data-abbr="ID">Indonesia</li>
+        <li data-abbr="IE">Ireland</li>
+        <li data-abbr="IL">Israel</li>
+        <li data-abbr="IT">Italy</li>
+        <li data-abbr="JP">Japan</li>
+        <li data-abbr="KR">Korea</li>
+        <li data-abbr="LU">Luxembourg</li>
+        <li data-abbr="MO">Macao</li>
+        <li data-abbr="MK">Macedonia</li>
+        <li data-abbr="MY">Malaysia</li>
+        <li data-abbr="MA">Morocco</li>
+        <li data-abbr="NL">Netherlands</li>
+        <li data-abbr="NZ">New Zealand</li>
+        <li data-abbr="NO">Norway</li>
+        <li data-abbr="PL">Poland</li>
+        <li data-abbr="PT">Portugal</li>
+        <li data-abbr="SA">Saudi Arabia</li>
+        <li data-abbr="SG">Singapore</li>
+        <li data-abbr="SK">Slovakia</li>
+        <li data-abbr="ZA">South Africa</li>
+        <li data-abbr="ES">Spain</li>
+        <li data-abbr="SE">Sweden</li>
+        <li data-abbr="CH">Switzerland</li>
+        <li data-abbr="TW">Taiwan</li>
+        <li data-abbr="TH">Thailand</li>
+        <li data-abbr="UK">United Kingdom</li>
+        <li data-abbr="US">United States</li>
+        <li data-abbr="VN">Vietnam</li>
     </ul>
-
     <div class="container container-main">
         <p class="sc d-md-block d-none">
             <span class="">SHIPPING TO </span>
@@ -140,17 +164,19 @@
             <div class="quility">
                 <div class="row align-items-end">
                     <div class="col-lg-6">
-                        <img class="d-md-block d-none" src="./public/img/quility-pic-left.png" alt="">
-                        <img class="d-md-none d-block" src="./public/img/quility-pic-left-m.png" alt="">
-                        <!-- <div class="d-lg-none d-block quility_text">
-                            <h3 class="title-common">ART IS ALL AROUND</h2>
-                            <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life practices of cultural aesthetics.</p>
-                        </div> -->
+                        <a href="./product-detail-2.html">
+                            <img class="d-md-block d-none" src="./public/img/quility-pic-left.png" alt="">
+                            <img class="d-md-none d-block" src="./public/img/quility-pic-left-m.png" alt="">
+                            <!-- <div class="d-lg-none d-block quility_text">
+                                <h3 class="title-common">ART IS ALL AROUND</h2>
+                                <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life practices of cultural aesthetics.</p>
+                            </div> -->
+                        </a>
                     </div>
                     <div class="col-lg-6">
                         <div class="quility_right">
                             <div class="quility_text">
-                                <h2 class="title-common">QUILITY</h2>
+                                <h2 class="title-common">Quility</h2>
                                 <p class="text-common">Our goal is to ensure that your prints are the highest quality, The papers we print on have been tested by Wilhelm Research and are recognized as the gold standard in the industry. We feel a responsibility to be assured you’re getting the best print possible.</p>
                                 <a href="" class="learnmore">LEARN MORE</a>
                             </div>
@@ -164,11 +190,11 @@
                     <h2 class="title-common">Recently <br>Added</h2>
                     <a href="" class="learnmore">VIEW ALL</a>
                 </div>
-                <div class="swiper-container product-list">
+                <div class="swiper-container product-list pl-top">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <div class="product-list_item">
-                            <a href="./product-content.html">
+                            <a href="./product-detail-1.html">
                                 <div class="product-list_pic"><img src="./public/img/product-1.png" alt=""></div>
                                 <div class="product-list_text">
                                     <h4>Title: Life is White</h4>
@@ -192,7 +218,7 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="product-list_item">
-                            <a href="./product-content.html">
+                            <a href="./product-detail-1.html">
                                 <div class="product-list_pic"><img src="./public/img/product-2.png" alt=""></div>
                                 <div class="product-list_text">
                                     <h4>Title: Life is White</h4>
@@ -216,7 +242,7 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="product-list_item">
-                            <a href="./product-content.html">
+                            <a href="./product-detail-1.html">
                                 <div class="product-list_pic"><img src="./public/img/product-3.png" alt=""></div>
                                 <div class="product-list_text">
                                     <h4>Title: Life is White</h4>
@@ -240,7 +266,7 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="product-list_item">
-                            <a href="./product-content.html">
+                            <a href="./product-detail-1.html">
                                 <div class="product-list_pic"><img src="./public/img/product-4.png" alt=""></div>
                                 <div class="product-list_text">
                                     <h4>Title: Life is White</h4>
@@ -264,7 +290,7 @@
                       </div>
                       <div class="swiper-slide">
                         <div class="product-list_item">
-                            <a href="./product-content.html">
+                            <a href="./product-detail-1.html">
                                 <div class="product-list_pic"><img src="./public/img/product-5.png" alt=""></div>
                                 <div class="product-list_text">
                                     <h4>Title: Life is White</h4>
@@ -312,14 +338,162 @@
                       </div>
                     </div>     
                 </div>
-
+                <div class="swiper-container product-list pl-bottom">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/product-1.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/product-2.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/product-3.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/product-4.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/product-5.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/product-6.png" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                      </div>
+                    </div>     
+                </div>
             </div>
 
             <div class="sm">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="sm_item sg">
-                            <img class="sm_item_pic" src="./public/img/guarantee.png" alt="">
+                            <div class="sm_item_pic"><img class="w-100" src="./public/img/guarantee.png" alt=""></div>
+                            
                             <div class="sm_item_text">
                                 <h2 class="title-common">Service Guarantee</h2>
                                 <p class="text-common">We are hoping to promote the habit of visual art collecting, integrating art into our daily lives delicately and profoundly, and furthermore fulfilling the life and furthermore fulfilling the life practices of cultural aesthetics .</p>
@@ -408,8 +582,8 @@
         </main>
     </div>
 
-    <div class="init active"></div>
-    <img class="init_pic" src="./public/img/init.svg" alt="">
+    <!-- <div class="init active"></div>
+    <img class="init_pic" src="./public/img/init.svg" alt=""> -->
 
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
@@ -422,10 +596,10 @@
             loop: true,
             speed: 1000,
         });
-        var swiper = new Swiper(".product-list", {
+        var swiper = new Swiper(".pl-top", {
             slidesPerView: 1.3,
-            slidesPerColumn: 2,
-            slidesPerColumnFill: 'row',
+            // slidesPerColumn: 2,
+            // slidesPerColumnFill: 'row',
             spaceBetween: 20,
             speed: 1000,
             pagination: {
@@ -435,11 +609,32 @@
             breakpoints: {
                 768: {
                     slidesPerView: 2,
-                    slidesPerColumn: 3,
+                    // slidesPerColumn: 3,
                 },
                 992: {
                     slidesPerView: 3,
-                    slidesPerColumn: 2,
+                    // slidesPerColumn: 2,
+                }
+            }
+        })
+        var swiper = new Swiper(".pl-bottom", {
+            slidesPerView: 1.3,
+            // slidesPerColumn: 2,
+            // slidesPerColumnFill: 'row',
+            spaceBetween: 20,
+            speed: 1000,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    // slidesPerColumn: 3,
+                },
+                992: {
+                    slidesPerView: 3,
+                    // slidesPerColumn: 2,
                 }
             }
         })

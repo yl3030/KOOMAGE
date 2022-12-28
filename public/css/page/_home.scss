@@ -1,8 +1,4 @@
-// .home_container {
-//     padding-left: 67px;
-//     padding-right: 23px;
-//     position: relative;
-// }
+
 .banner {
     display: flex;
     padding-right: 60px;
@@ -17,14 +13,14 @@
         h1 {
             width: 100%;
             font-family: PostGroteskMedium;
-            font-size: 17px;
+            font-size: 18px;
             margin-bottom: 20px;
             font-weight: 600;
         }
         p {
             font-family: PostGroteskLight;
             font-weight: 300;
-            line-height: 2;
+            // line-height: 2;
             margin: 0;
         }
     }
@@ -53,6 +49,8 @@
         &_text {
             width: 100%;
             order: 2;
+            padding-right: 45px;
+            padding-left: 35px;
         }
         &_slider {
             width: 100%;
@@ -77,9 +75,6 @@
     }
     &_right {
         padding-left: 80px;
-        // display: flex;
-        // flex-wrap: wrap;
-        // align-content: flex-end;
         h3 {
             width: 100%;
         }
@@ -94,19 +89,16 @@
     @media screen and (max-width: 991px) {
         margin-top: 27px;
         &_text {
-            padding: 83px 45px 64px 35px;
+            // padding: 83px 45px 64px 35px;
+            padding: 40px 45px 32px 35px;
         }
         &_right {
             padding-left: 0;
-            // display: flex;
-            // flex-wrap: wrap;
             .quility_text {
-                // order: 2;
                 width: 100%;
             }
             img {
                 width: 100%;
-                // order: 1;
                 margin-top: 0;
             }
         }
@@ -144,6 +136,13 @@
     @media screen and (max-width: 767px) {
         padding-right: 0;
         padding-left: 33px;
+        margin-top: 50px;
+        &_title {
+            margin-bottom: 16px;
+            h2 {
+                font-size: 26px;
+            }
+        }
     }
     @media screen and (max-width: 374px) {
         &_title {
@@ -190,6 +189,8 @@
                 }
                 &_pic {
                     order: 2;
+                    display: flex;
+                    align-items: flex-end;
                 }
             }
         }
@@ -243,7 +244,8 @@
                 }
             }
             &_text {
-                padding: 87px 48px 63px;
+                // padding: 87px 48px 63px;
+                padding: 43px 48px 31px;
             }
         }
     }

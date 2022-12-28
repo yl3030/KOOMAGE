@@ -36,45 +36,16 @@
             right: 15px;
             bottom: 25px;
         }
-        // &_save {
-        //     width: 15px;
-        //     position: absolute;
-        //     right: 15px;
-        //     bottom: 25px;
-        //     cursor: pointer;
-        //     svg {
-        //         width: 100%;
-        //         path, rect {
-        //             transition: 0.3s;
-        //         }
-        //     }
-        //     &:hover {
-        //         svg {
-        //             path {
-        //                 stroke: $gray-d4;
-        //                 fill: $gray-d4;
-        //             }
-        //         }
-        //     }
-        //     &.active, &:active {
-        //         svg {
-        //             path {
-        //                 stroke: $gray-80;
-        //                 fill: $gray-80;
-        //             }
-        //         }
-        //     }
-        // }
         @media screen and (max-width: 991px) {
             margin-top: 4px;
-            margin-bottom: 51px;
+            // margin-bottom: 51px;
+            margin-bottom: 0;
             &_item {
                 margin-bottom: 32px;
             }
         }
     }
     &_main {
-        // width: calc(100% - 305px);
         width: 75%;
         &_pic {
             width: 100%;
@@ -94,7 +65,6 @@
         }
     }
     &_intro {
-        // width: 305px;
         width: 25%;
         padding-left: 40px;
         padding-top: 21px;
@@ -117,8 +87,9 @@
             position: relative;
             text-align: center;
             transition: 0.3s;
+            transform: translateX(1px);
+            z-index: 5;
             &_title {
-                // text-align: right;
                 color: #a6a6a6;
                 font-size: 12px;
                 margin: 0;
@@ -131,12 +102,12 @@
                 width: 100%;
                 background-color: #d4d4d4;
                 z-index: 5;
-                padding: 5px 20px;
+                padding: 5px 0;
                 display: none;
                 li {
                     font-family: FrutigerLight;
                     text-align: right;
-                    padding: 3px 0;
+                    padding: 3px 20px;
                     position: relative;
                     cursor: pointer;
                     &::before {
@@ -153,16 +124,13 @@
                         transition: 0.3s;
                     }
                     &:hover {
-                        &::before {
-                            opacity: 1;
-                        }
+                        background-color: rgb(234, 234, 234);
                     }
                 }
             }
             &.active {
                 .product_intro_change_title {
                     background-color: #d4d4d4;
-                    color: #fff;
                 }
             }
         }
@@ -264,30 +232,6 @@
             font-family: FrutigerLightCn;
             font-size: 12px;
         }
-        // &_item {
-        //     display: flex;
-        //     li {
-        //         padding: 5px 10px;
-        //         margin-left: 5px;
-        //         color: $gray-b2;
-        //         cursor: pointer;
-        //         transition: 0.3s;
-        //         &:first-child {
-        //             margin-left: 0;
-        //         }
-        //         &.active {
-        //             color: $common-text;
-        //             background-color: #F3F1ED;
-        //         }
-        //     }
-        //     &.no-bg {
-        //         li {
-        //             &.active {
-        //                 background-color: transparent;
-        //             }
-        //         }
-        //     }
-        // }
         &_list {
             display: none;
             li {
@@ -339,7 +283,6 @@
                 background-color: transparent;
                 border-radius: 0;
                 color: $common-text;
-                // border-top: 1px solid $gray-b2;
             }
         }
         .nav-item {
@@ -468,37 +411,21 @@
             }
         }
     }
-    // &_like {
-    //     .row {
-    //         margin-left: -10px;
-    //         margin-right: -10px;
-    //         >div {
-    //             padding-left: 10px;
-    //             padding-right: 10px;
-    //         }
-    //     }
-    //     &-m {
-    //         padding-left: 12px;
-    //         margin-bottom: 46px;
-    //     }
-    // }
     &_change {
         margin-bottom: 23px;
     }
     &_detail {
         padding-right: 43px;
-        padding-top: 38px;
         &_pic {
             position: relative;
             margin-bottom: 86px;
             width: 100%;
             position: relative;
-            // padding-bottom: 77%;
             &.horiSlider {
-                padding-bottom: 77%;
+                padding-bottom: 71%;
             }
             &.vertiSlider {
-                padding-bottom: 87%;
+                padding-bottom: 71%;
             }
         }
         &_slider {
@@ -571,16 +498,17 @@
     &_like {
         &_pic {
             width: 100%;
-                position: relative;
-                padding-bottom: 77%;
-                img {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    object-fit: cover;
-                }
+            position: relative;
+            padding-bottom: 77%;
+            display: block;
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
         }
     }
     @media screen and (max-width: 1199px) {
@@ -594,7 +522,8 @@
     @media screen and (max-width: 991px) {
         &_detail {
             &_pic {
-                margin-bottom: 100px;
+                // margin-bottom: 100px;
+                margin-bottom: 44px;
             }
         }
         &_intro {
@@ -614,8 +543,28 @@
         }
     }
     @media screen and (max-width: 767px) {
+        &_main {
+            // padding-bottom: 20px;
+        }
         &_detail {
             padding: 0;
+            &_pic {
+                &.vertiSlider, &.horiSilder {
+                    padding-bottom: 118.9%;
+                }
+            }
+            &_slider {
+                &_pagi {
+                    right: inherit;
+                    left: 44px;
+                    bottom: -25px;
+                    display: flex;
+                    // bottom: ;
+                    .swiper-pagination-bullet {
+                        margin-right: 5px;
+                    }
+                }
+            }
         }
         &_intro {
             padding-left: 44px;
@@ -625,15 +574,21 @@
             padding-left: 44px;
             padding-right: 0;
         }
+        &_tab {
+            .nav-item {
+                width: 50%;
+                margin: 0;
+            }
+        }
     }
     @media screen and (max-width: 575px) {
         &_detail {
             &_pic {
                 &.horiSilder {
-                    padding-bottom: 91%;
+                    // padding-bottom: 91%;
                 }
                 &.vertiSlider {
-                    padding-bottom: 100%;
+                    // padding-bottom: 100%;
                 }
             }
         }
@@ -670,34 +625,10 @@
     }
 }
 
-@media screen and (max-width:1399px) {
-    .product {
-        &-list {
-            &_save {
-                // top: calc(83% + 11px);
-            }
-        }
-    }
-}
 
-@media screen and (max-width:1199px) {
-    .product {
-        &-list {
-            &_save {
-                // top: calc(80% + 11px);
-            }
-        }
-    }
-}
 
 @media screen and (max-width:991px) {
     .product {
-        &-list {
-            
-            &_save {
-                // top: calc(83% + 11px);
-            }
-        }
         &_main {
             width: 100%;
             padding-right: 0;
@@ -718,32 +649,15 @@
     }
 }
 
-@media screen and (max-width:767px) {
-    .product {
-        &-list {
-            &_save {
-                // top: calc(78.5% + 11px);
-            }
-        }
-    }
-}
+
 
 @media screen and (max-width:575px) {
     .product {
-        &-list {
-            // padding-left: 21px;
-            &_save {
-                // top: calc(86% + 11px);
-            }
-        }
-        &_intro {
-            // padding-left: 12px;
-            // padding-right: 12px;
-        }
         &_spec {
             margin-bottom: 43px;
             >li {
-                padding: 13px 6px;
+                // padding: 13px 6px;
+                padding: 0;
                 &::before {
                     background-image: linear-gradient(to right, $gray-b2 0%, $gray-b2 50%, transparent 50%);
                 }
