@@ -39,6 +39,11 @@
 }
 
 @font-face {
+  font-family: PostGroteskRegular;
+  src: url(../font/PostGrotesk-Regular.woff) format("woff"), url(../font/PostGrotesk-Regular.otf) format("opentype");
+}
+
+@font-face {
   font-family: PostGroteskLight;
   src: url(../font/post-grotesk-light.woff) format("woff"), url(../font/post-grotesk-light.otf) format("opentype");
 }
@@ -1220,7 +1225,7 @@ input, button {
 
 .banner_text h1 {
   width: 100%;
-  font-family: PostGroteskMedium;
+  font-family: PostGroteskRegular;
   font-size: 18px;
   margin-bottom: 20px;
   font-weight: 600;

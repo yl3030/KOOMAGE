@@ -39,6 +39,11 @@
       url(../font/post-grotesk-medium.otf) format("opentype");
 }
 @font-face {
+    font-family: PostGroteskRegular;
+    src: url(../font/PostGrotesk-Regular.woff) format("woff"),
+      url(../font/PostGrotesk-Regular.otf) format("opentype");
+}
+@font-face {
     font-family: PostGroteskLight;
     src: url(../font/post-grotesk-light.woff) format("woff"),
       url(../font/post-grotesk-light.otf) format("opentype");
