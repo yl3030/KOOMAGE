@@ -19,7 +19,6 @@ $(".menu_second_account").click(function(){
     if($(window).width()>=768){
         $("#menu_third_account").toggleClass("active");
     }else {
-        // $(this).toggleClass("active");
         $(this).parents(".menu_second_item").find(".menu_third-m").slideToggle(300);
     }
     
@@ -35,24 +34,24 @@ $(".menu_third_a").click(function(){
 })
 
 $(".header_menu").click(function(){
-    $(this).toggleClass("active");
-    $(".menu").toggleClass("active");
-    // if($(window).width()>=768) {
-    //     $(".header_bag").toggleClass("active");
-    // }else {
-    //     $(".header").toggleClass("active");
-    // }
+    if($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(".menu").removeClass("active");
+        $("body").css("overflow","auto");
+    }else {
+        $(this).addClass("active");
+        $(".menu").addClass("active");
+        $("body").css("overflow","hidden");
+    }
 })
 
 $(".sc").click(function(){
-    // $(".sc_list").toggleClass("active");
     $(".sc_list").slideToggle(300);
 })
 $(".sc_list>li").click(function(){
     let abbr = $(this).data("abbr");
     $(".ca").text(abbr);
     $(".sc_list").slideUp(300);
-    // $(".sc_list").removeClass("active");
 })
 
 $(".product-list_save").click(function(){
@@ -62,10 +61,8 @@ $(".product-list_save").click(function(){
 $(".collect").click(function(){
     if($(this).hasClass("active")) {
         $(this).removeClass("active");
-        // $(this).find(".collect_text").show();
     }else {
         $(this).addClass("active");
-        // $(this).find(".collect_text").delay(2000).fadeOut(500);
     }
    
 })
@@ -95,12 +92,18 @@ $(".product_spec_item").click(function(){
     $(this).find(".product_spec_icon").toggleClass("active");
 })
 $(".product_spec_list_item").click(function(){
-    let price = $(this).data("price");
+    let price = $(this).find("span").data("price");
     let spec = $(this).text();
     $(this).parents(".product_spec_list").slideUp(300);
     $(this).parents(".product_spec_li").find(".product_spec_icon").removeClass("active");
     $(".product_change_price").text(price);
     $(this).parents(".product_spec_li").find(".product_spec_chosen").text(spec);
+})
+$(".product_spec_list_item").mouseover(function(){
+    $(this).find(".product_spec_list_pic").slideDown(300);
+})
+$(".product_spec_list_item").mouseleave(function(){
+    $(this).find(".product_spec_list_pic").slideUp(300);
 })
 
 
