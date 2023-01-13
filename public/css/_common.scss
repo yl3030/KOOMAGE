@@ -130,6 +130,7 @@ input, button {
         position: relative;
         cursor: pointer;
         transition: 0.4s;
+        z-index: 15;
         .bar {
             background-color: $common-text;
             height: 1px;
@@ -240,7 +241,7 @@ input, button {
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 7;
     padding-top: 196px;
     padding-left: 28vw;
     overflow-y: auto;
@@ -519,17 +520,14 @@ input, button {
     &_list {
         position: fixed;
         height: calc(100vh - 50px);
-        width: 300px;
+        width: 200px;
         top: 49px;
         right: 28px;
         z-index: 8;
         background-color: #e7e7e9;
         cursor: pointer;
         display: none;
-        // opacity: 0;
-        // visibility: hidden;
         transform: translateX(20px);
-        // transition: 0.3s;
         overflow-y: auto;
         li {
             padding: 3px 10px;
@@ -557,7 +555,6 @@ input, button {
 
 .title {
     &-common {
-        // font-family: GoudyOldStyleRegular;
         font-family: adobe-garamond-pro, serif;
         font-size: 24px;
         margin-bottom: 10px;
@@ -843,7 +840,6 @@ input, button {
         }
     }
     @media screen and (max-width:991px) {
-        // padding-top: 86px;
         padding-top: 43px;
         &_left {
             width: 100%;
@@ -857,7 +853,6 @@ input, button {
                 margin-bottom: 34px;
                 label {
                     text-align: left;
-                    // margin-bottom: 44px;
                     margin-bottom: 22px;
                 }
                 p {
@@ -892,7 +887,6 @@ input, button {
             width: 100%;
             order: 1;
             justify-content: space-between;
-            // margin-bottom: 40px;
             margin-bottom: 20px;
         }
     }

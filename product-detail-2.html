@@ -264,7 +264,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <ul class="product_spec_list">
+                            <ul class="product_spec_list frame">
                                 <li class="product_spec_list_item"><span>No Frame</span></li>
                                 <li class="product_spec_list_item">
                                     <span>Oak Nature Frame</span>
@@ -305,7 +305,10 @@
                             </ul>
                         </li>
                     </ul>
-                    <button class="btn-addtocart">ADD TO CART</button>
+                    <button class="btn-addtocart">
+                        <div class="btn-addtocart_bg"></div>
+                        <span>ADD TO CART</span>
+                    </button>
                     <div class="product_tab">
                         <ul class="nav nav-pills" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -436,13 +439,26 @@
             slidesPerView: 1,
             loop: true,
             speed: 1000,
-            direction: "vertical",
-            mousewheel: true,
+            direction: "horizontal",
+            mousewheel: false,
             pagination: {
                 el: ".product_detail_slider_pagi",
                 clickable: true,
             },
+            breakpoints: {
+                768: {
+                    direction: "vertical",
+                    mousewheel: true,
+                },
+            }
         });
+        $(".product_detail_slider").click(function(){
+            if($(window).width() < 768) {
+                swiper1.slideNext(1000, true)
+            }
+        });
+
+
         var swiper3 = new Swiper(".product_like_slider-m", {
             slidesPerView: 1.5,
             speed: 1000,
@@ -462,6 +478,8 @@
             observeParents:true,
             observer:true,
         });
+
+
     </script>
 
 </body>

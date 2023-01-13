@@ -82,14 +82,21 @@ $(".init_pic").click(function(){
     $("body").removeClass("noscroll");
 })
 
-$(".product_intro_change").click(function(){
-    $(this).toggleClass("active");
-    $(this).find(".product_intro_change_list").slideToggle(300);
+$(".product_intro_change_title").click(function(){
+    $(this).parents(".product_intro_change").toggleClass("active");
+    $(this).parents(".product_intro_change").find(".product_intro_change_list").slideToggle(300);
+})
+
+$(".product_intro_change li").click(function(){
+    $(this).addClass("active").siblings("li").removeClass("active");
+    $(this).parents(".product_intro_change_list").slideUp(300);
 })
 
 $(".product_spec_item").click(function(){
     $(this).parents(".product_spec_li").find(".product_spec_list").slideToggle(300);
     $(this).find(".product_spec_icon").toggleClass("active");
+    $(this).parents(".product_spec_li").siblings(".product_spec_li").find(".product_spec_list").slideUp(300);
+    $(this).parents(".product_spec_li").siblings(".product_spec_li").find(".product_spec_icon").removeClass("active");
 })
 $(".product_spec_list_item").click(function(){
     let price = $(this).find("span").data("price");
@@ -131,4 +138,10 @@ $(window).on("resize scroll",function(){
     }else {
         $(".product_detail_slider_pagi").fadeIn();
     }
+
+    if($(window).scrollTop()>0) {
+        $(".sc_list").fadeOut(300);
+    }
 })
+
+

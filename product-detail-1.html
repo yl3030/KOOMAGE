@@ -127,28 +127,30 @@
             <span class="">SHIPPING TO </span>
             <span class="ca">CA</span>
         </p>
-        <main>
+        <main class="">
             <div class="d-flex flex-wrap product_detail">
                 <div class="product_main">
-                    <div class="product_detail_pic horiSlider">
-                        <div class="swiper-container product_detail_slider">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide">
-                                <div class="product_detail_slider_pic">
-                                    <img class="d-md-block d-none" src="./public/img/B-PA-1.jpg" alt="">
-                                    <img class="d-md-none" src="./public/img/P-1M_1.jpg" alt="">
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="product_detail_slider_pic">
-                                    <img class="d-md-block d-none" src="./public/img/B-PA-2.jpg" alt="">
-                                    <img class="d-md-none" src="./public/img/P-1M_2.jpg" alt="">
-                                </div>
-                              </div>
-                            </div>     
+                    <div class="inner">
+                        <div class="product_detail_pic horiSlider">
+                            <div class="swiper-container product_detail_slider">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="product_detail_slider_pic">
+                                        <img class="d-md-block d-none" src="./public/img/B-PA-1.jpg" alt="">
+                                        <img class="d-md-none" src="./public/img/P-1M_1.jpg" alt="">
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="product_detail_slider_pic">
+                                        <img class="d-md-block d-none" src="./public/img/B-PA-2.jpg" alt="">
+                                        <img class="d-md-none" src="./public/img/P-1M_2.jpg" alt="">
+                                    </div>
+                                  </div>
+                                </div>     
+                            </div>
+                            <div class="product_detail_slider_pagi"></div>
+                            <div class="product_detail_slider_cross"><img src="./public/img/icon-cross.svg" alt=""></div>
                         </div>
-                        <div class="product_detail_slider_pagi"></div>
-                        <div class="product_detail_slider_cross"><img src="./public/img/icon-cross.svg" alt=""></div>
                     </div>
                     <!-- <img class="product_main_pic d-sm-block d-none" src="./public/img/art-pic-1.png" alt="">
                     <div class="product_main_pic-m d-sm-none d-block"><img src="./public/img/art-pic-m.png" alt=""></div> -->
@@ -266,7 +268,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <ul class="product_spec_list">
+                            <ul class="product_spec_list frame">
                                 <li class="product_spec_list_item"><span>No Frame</span></li>
                                 <li class="product_spec_list_item">
                                     <span>Oak Nature Frame</span>
@@ -307,7 +309,10 @@
                             </ul>
                         </li>
                     </ul>
-                    <button class="btn-addtocart">ADD TO CART</button>
+                    <button class="btn-addtocart">
+                        <div class="btn-addtocart_bg"></div>
+                        <span>ADD TO CART</span>
+                    </button>
                     <ul class="product_tab-m d-sm-none d-block">
                         <li>
                             <div class="product_tab-m_title">
@@ -472,13 +477,27 @@
             slidesPerView: 1,
             loop: true,
             speed: 1000,
-            direction: "vertical",
-            mousewheel: true,
+            direction: "horizontal",
+            mousewheel: false,
             pagination: {
                 el: ".product_detail_slider_pagi",
                 clickable: true,
             },
+            breakpoints: {
+                768: {
+                    // direction: "vertical",
+                    mousewheel: true,
+                },
+            }
         });
+        $(".product_detail_slider").click(function(){
+            if($(window).width() < 768) {
+                swiper1.slideNext(1000, true)
+            }else {
+                $("main").toggleClass("productBig");
+            }
+        });
+
         var swiper3 = new Swiper(".product_like_slider-m", {
             slidesPerView: 1.5,
             speed: 1000,
