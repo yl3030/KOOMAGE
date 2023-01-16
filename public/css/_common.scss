@@ -174,13 +174,31 @@ input, button {
     }
     @media screen and (min-width: 992px) {
         &_menu {
-            &:hover {
-                transition-delay: 0.8s;
-                transform: rotate(90deg);
-                .bar {
-                    width: 20px;
-                    top: 10px;
-                    left: 0;
+            &:not(.active) {
+                &:hover {
+                    transition-delay: 0.8s;
+                    transform: rotate(90deg);
+                    transform-origin: 10px 10px;
+                    .bar {
+                        // &.top {
+                        //     animation: menuBarTop 1s forwards;
+                        // }
+                        // &.middle {
+                        //     animation: menuBarMiddle 1s forwards;
+                        // }
+                        // &.bottom {
+                        //     animation: menuBarBottom 1s forwards;
+                        // }
+                        width: 20px;
+                        top: 10px;
+                        // top: 50%;
+                        left: 0;
+                        // &_inner {
+                        //     transform: rotate(90deg);
+                        //     transition-delay: 0.8s;
+                        // }
+                        // transform: rotate(90deg);
+                    }
                 }
             }
         }
@@ -231,6 +249,69 @@ input, button {
                 }
             }
         }
+    }
+}
+
+@keyframes menuBarTop {
+    0% {
+        width: 22px;
+        left: 0;
+        top: 0;
+        transform: none;
+    }
+    50% {
+        width: 20px;
+        top: 10px;
+        left: 0;
+        transform: none;
+    }
+    100% {
+        width: 20px;
+        top: 10px;
+        left: 0;
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes menuBarMiddle {
+    0% {
+        width: 16px;
+        left: 2px;
+        top: 10px;
+        transform: none;
+    }
+    50% {
+        width: 20px;
+        top: 10px;
+        left: 0;
+        transform: none;
+    }
+    100% {
+        width: 20px;
+        top: 10px;
+        left: 0;
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes menuBarBottom {
+    0% {
+        width: 100%;
+        left: 0;
+        top: calc(100% - 1px);
+        transform: none;
+    }
+    50% {
+        width: 20px;
+        top: 10px;
+        left: 0;
+        transform: none;
+    }
+    100% {
+        width: 20px;
+        top: 10px;
+        left: 0;
+        transform: rotate(90deg);
     }
 }
 

@@ -64,12 +64,22 @@
                 }
             }
         }
+        &_inner {
+            width: 75%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            // transition: 0.8s;
+        }
     }
     &_intro {
         width: 25%;
         padding-left: 40px;
         padding-top: 21px;
         transition: 0.8s;
+        position: absolute;
+        top: 0;
+        right: 0;
         &_title {
             margin-bottom: 26px;
             p {
@@ -128,11 +138,6 @@
                     &:hover, &.active {
                         background-color: rgb(234, 234, 234);
                     }
-                }
-            }
-            &.active {
-                .product_intro_change_title {
-                    // background-color: #d4d4d4;
                 }
             }
         }
@@ -239,16 +244,22 @@
             li {
                 border-top: 1px solid $gray-d4;
                 font-family: FrutigerLightCn;
-                text-align: right;
+                // text-align: right;
                 cursor: pointer;
                 transition: 0.3s;
                 padding: 10px 40px;
                 span {
                     display: block;
+                    width: fit-content;
+                    margin-left: auto;
                 }
                 &:hover {
                     background-color: $gray-d4;
                     color: #fff;
+                    .product_spec_list_pic {
+                        // height: 338.58px;
+                        padding-bottom: 88%;
+                    }
                 }
             }
             &.frame {
@@ -260,10 +271,13 @@
                 }
             }
             &_pic {
-                display: none;
+                // display: none;
                 width: 100%;
+                padding-bottom: 0;
+                overflow: hidden;
+                transition: 0.5s;
                 position: relative;
-                padding-bottom: 100%;
+                // padding-bottom: 100%;
                 img {
                     width: 100%;
                     height: 100%;
@@ -443,16 +457,25 @@
     }
     &_detail {
         padding-right: 43px;
+        &_inner {
+            position: relative;
+        }
         &_pic {
             position: relative;
-            margin-bottom: 86px;
+            // margin-bottom: 86px;
             width: 100%;
+            // width: 75%;
             transition: 0.8s;
             &.horiSlider {
+                // padding-bottom: calc(75% * 0.71);
                 padding-bottom: 71%;
             }
             &.vertiSlider {
+                // padding-bottom: calc(75% * 0.71);
                 padding-bottom: 71%;
+            }
+            .swiper-slide {
+                // width: 100% !important;
             }
         }
         &_slider {
@@ -462,6 +485,11 @@
             top: 0;
             left: 0;
             &_pic {
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 100%;
                 img {
                     position: absolute;
                     width: 100%;
@@ -510,27 +538,12 @@
                 z-index: 6;
             }
         }
-        // &.larger {
-        //     .product {
-        //         &_main {
-        //             width: 100%;
-        //             .product_like {
-        //                 width: calc(100% - 305px);
-        //             }
-        //         }
-        //         &_intro {
-        //             width: 0;
-        //             display: none;
-        //         }
-        //         &_detail {
-        //             &_pic {
-        //                 padding-right: 30vw;
-        //             }
-        //         }
-        //     }
-        // }
     }
     &_like {
+        position: absolute;
+        left: 0;
+        width: 75%;
+        transition: 0.8s;
         &_pic {
             width: 100%;
             position: relative;
@@ -545,55 +558,66 @@
                 object-fit: cover;
             }
         }
+        &_slider {
+            width: 100%;
+        }
     }
     &Big {
         .product {
-            &_main {
-                width: 100%;
-            }
-            &_intro {
-                // width: 0;
-                // opacity: 0;
-                // visibility: hidden;
-                display: none;
-                // position: fixed;
-                // width: calc();
-                // opacity: 0;
-            }
             &_detail {
-                &_pic {
+                height: 100vh !important;
+                overflow: hidden;
+            }
+            &_main {
+                &_inner {
                     padding-bottom: calc(100vh - 100px);
                     width: calc((100vh - 100px) / 0.71);
-                    margin-left: auto;
-                    margin-right: auto;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
+            &_intro {
+                opacity: 0;
+                transform: translateX(100px);
+                visibility: hidden;
+            }
             &_like {
-                padding-right: 25%;
-                // display: none !important;
-                // opacity: 0;
-                // visibility: hidden;
+                opacity: 0;
             }
         }
     }
     @media screen and (max-width: 1199px) {
         &_main {
-            width: calc(100% - 305px);
+            // width: calc(100% - 305px);
+            &_inner {
+                width: calc(100% - 305px);
+            }
         }
         &_intro {
             width: 305px;
         }
+        &_like {
+            width: calc(100% - 305px);
+        }
     }
     @media screen and (max-width: 991px) {
+        &_main {
+            &_inner {
+                position: static;
+                width: 100%;
+            }
+        }
         &_detail {
             &_pic {
-                // margin-bottom: 100px;
                 margin-bottom: 44px;
                 padding-bottom: 119% !important;
+                height: auto !important;
             }
         }
         &_intro {
             padding: 0;
+            position: static;
             &_text {
                 margin-bottom: 15px;
             }
@@ -606,6 +630,8 @@
         }
         &_like {
             padding-right: 43px;
+            position: static;
+            width: 100%;
         }
     }
     @media screen and (max-width: 767px) {
@@ -657,7 +683,6 @@
 
 .btn-addtocart {
     width: 100%;
-    // padding: 3px;
     height: 27px;
     border: 0;
     margin-bottom: 51px;
@@ -717,8 +742,6 @@
         }
     }
 }
-
-
 
 @media screen and (max-width:575px) {
     .product {
