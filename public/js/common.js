@@ -179,5 +179,7 @@ if($(window).width() >= 992) {
 $(window).on("resize scroll",function(){
     if($(window).width() >= 992) {
         productPosition();
+    }else {
+        $(".product_detail").height("auto");
     }
 });
