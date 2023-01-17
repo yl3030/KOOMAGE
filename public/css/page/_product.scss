@@ -244,7 +244,6 @@
             li {
                 border-top: 1px solid $gray-d4;
                 font-family: FrutigerLightCn;
-                // text-align: right;
                 cursor: pointer;
                 transition: 0.3s;
                 padding: 10px 40px;
@@ -253,12 +252,13 @@
                     width: fit-content;
                     margin-left: auto;
                 }
-                &:hover {
-                    background-color: $gray-d4;
-                    color: #fff;
-                    .product_spec_list_pic {
-                        // height: 338.58px;
-                        padding-bottom: 88%;
+                @media screen and (min-width: 768px) {
+                    &:hover {
+                        background-color: $gray-d4;
+                        color: #fff;
+                        .product_spec_list_pic {
+                            padding-bottom: 88%;
+                        }
                     }
                 }
             }
@@ -268,16 +268,21 @@
                     span {
                         padding: 10px 40px;
                     }
+                    &.active {
+                        background-color: $gray-d4;
+                        color: #fff;
+                        .product_spec_list_pic {
+                            padding-bottom: 88%;
+                        }
+                    }
                 }
             }
             &_pic {
-                // display: none;
                 width: 100%;
                 padding-bottom: 0;
                 overflow: hidden;
                 transition: 0.5s;
                 position: relative;
-                // padding-bottom: 100%;
                 img {
                     width: 100%;
                     height: 100%;
@@ -668,6 +673,13 @@
                 margin: 0;
             }
         }
+        // &_spec {
+        //     &_list {
+        //         &_pic {
+
+        //         }
+        //     }
+        // }
     }
 }
 

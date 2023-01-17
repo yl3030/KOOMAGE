@@ -103,20 +103,31 @@ $(".product_spec_item").click(function(){
         if(specWidth > specWidthMax) {
             specWidthMax = specWidth;
         }
-        console.log("specWidthMax=" + specWidthMax + ",specWidth=" + specWidth);
+        // console.log("specWidthMax=" + specWidthMax + ",specWidth=" + specWidth);
     })
     $(this).parents(".product_spec_li").find(".product_spec_list_item>span").each(function(){
         $(this).width(specWidthMax + 1);
     })
 })
 $(".product_spec_list_item").click(function(){
-    let price = $(this).data("price");
-    let spec = $(this).find("span").text();
-    $(this).parents(".product_spec_list").slideUp(300);
-    $(this).parents(".product_spec_li").find(".product_spec_icon").removeClass("active");
-    $(".product_change_price").text(price);
-    $(this).parents(".product_spec_li").find(".product_spec_chosen").text(spec);
-    
+    if($(window).width() < 768 && $(this).parents(".product_spec_list").hasClass("frame")) {
+        if(!$(this).hasClass("active")) {
+            $(this).addClass("active");
+        }else {
+            $(this).removeClass("active");
+            let spec = $(this).find("span").text();
+            $(this).parents(".product_spec_list").slideUp(300);
+            $(this).parents(".product_spec_li").find(".product_spec_icon").removeClass("active");
+            $(this).parents(".product_spec_li").find(".product_spec_chosen").text(spec);
+        }    
+    }else {
+        let price = $(this).data("price");
+        let spec = $(this).find("span").text();
+        $(this).parents(".product_spec_list").slideUp(300);
+        $(this).parents(".product_spec_li").find(".product_spec_icon").removeClass("active");
+        $(".product_change_price").text(price);
+        $(this).parents(".product_spec_li").find(".product_spec_chosen").text(spec);
+    }
 })
 // $(".product_spec_list_item").mouseover(function(){
 //     $(this).find(".product_spec_list_pic").slideDown(300);

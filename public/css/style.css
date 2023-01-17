@@ -2027,13 +2027,14 @@ body.noscroll {
   margin-left: auto;
 }
 
-.product_spec_list li:hover {
-  background-color: #d4d4d4;
-  color: #fff;
-}
-
-.product_spec_list li:hover .product_spec_list_pic {
-  padding-bottom: 88%;
+@media screen and (min-width: 768px) {
+  .product_spec_list li:hover {
+    background-color: #d4d4d4;
+    color: #fff;
+  }
+  .product_spec_list li:hover .product_spec_list_pic {
+    padding-bottom: 88%;
+  }
 }
 
 .product_spec_list.frame li {
@@ -2042,6 +2043,15 @@ body.noscroll {
 
 .product_spec_list.frame li span {
   padding: 10px 40px;
+}
+
+.product_spec_list.frame li.active {
+  background-color: #d4d4d4;
+  color: #fff;
+}
+
+.product_spec_list.frame li.active .product_spec_list_pic {
+  padding-bottom: 88%;
 }
 
 .product_spec_list_pic {
