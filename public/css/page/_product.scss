@@ -31,6 +31,28 @@
                 margin: 0;
             }
         }
+        &-box {
+            position: relative;
+        }
+        &_arrow {
+            position: absolute;
+            width: 15px;
+            top: 50%;
+            transition: 0.3s;
+            transform: translateY(calc(-50% - 40px));
+            img {
+                width: 100%;
+            }
+            &.prev {
+                left: -35px;
+            }
+            &.next {
+                right: -35px;
+            }
+            &.swiper-button-disabled {
+                opacity: 0;
+            }
+        }
         .collect {
             position: absolute;
             right: 15px;
@@ -38,10 +60,14 @@
         }
         @media screen and (max-width: 991px) {
             margin-top: 4px;
-            // margin-bottom: 51px;
             margin-bottom: 0;
             &_item {
                 margin-bottom: 32px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            &_arrow {
+                display: none;
             }
         }
     }
@@ -65,18 +91,61 @@
             }
         }
         &_inner {
-            width: 75%;
+            width: 100%;
+            padding-bottom: 70.73%;
+            position: relative;
+        }
+        &_slider {
+            width: 100%;
+            height: 100%;
             position: absolute;
             top: 0;
             left: 0;
-            // transition: 0.8s;
+            ul {
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                transition: 0.8s;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+            }
+        }
+        &_item {
+            width: 100%;
+            padding-bottom: 70.73%;
+            position: relative;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                top: 0;
+                left: 0;
+                position: absolute;
+            }
+        }
+        &_pagi {
+            position: absolute;
+            right: calc(100% + 10px);
+            bottom: 0;
+        }
+        &_dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #d4d4d4;
+            margin-top: 6px;
+            &.active {
+                background-color: #595959;
+            }
         }
     }
     &_intro {
         width: 25%;
         padding-left: 40px;
         padding-top: 21px;
-        transition: 0.8s;
+        transition: 0.8s; 
         position: absolute;
         top: 0;
         right: 0;
@@ -153,7 +222,6 @@
         &_text {
             font-family: PostGroteskLight;
             font-size: 12px;
-            // text-align: justify;
             margin-bottom: 50px;
         }
     }
@@ -464,23 +532,18 @@
         padding-right: 43px;
         &_inner {
             position: relative;
+            display: flex;
+            flex-wrap: wrap;
         }
         &_pic {
             position: relative;
-            // margin-bottom: 86px;
             width: 100%;
-            // width: 75%;
             transition: 0.8s;
             &.horiSlider {
-                // padding-bottom: calc(75% * 0.71);
                 padding-bottom: 71%;
             }
             &.vertiSlider {
-                // padding-bottom: calc(75% * 0.71);
                 padding-bottom: 71%;
-            }
-            .swiper-slide {
-                // width: 100% !important;
             }
         }
         &_slider {
@@ -545,10 +608,8 @@
         }
     }
     &_like {
-        position: absolute;
-        left: 0;
-        width: 75%;
         transition: 0.8s;
+        margin-top: 86px;
         &_pic {
             width: 100%;
             position: relative;
@@ -569,48 +630,84 @@
     }
     &Big {
         .product {
-            &_detail {
-                height: 100vh !important;
-                overflow: hidden;
-            }
+            // &_detail {
+            //     height: 100vh !important;
+            //     overflow: hidden;
+            // }
+            // &_main {
+            //     &_inner {
+            //         padding-bottom: calc(100vh - 100px);
+            //         width: calc((100vh - 100px) / 0.71);
+            //         top: 0;
+            //         left: 50%;
+            //     }
+            // }
+            // &_intro {
+            //     opacity: 0;
+            //     transform: translateX(100px);
+            //     visibility: hidden;
+            // }
+            // &_like {
+            //     opacity: 0;
+            // }
             &_main {
+                width: 100%;
                 &_inner {
                     padding-bottom: calc(100vh - 100px);
+                    width: calc((100vh - 100px) / 0.7073);
+                    margin: 0 auto;
+                }
+            }
+            &_intro {
+                opacity: 0;
+                // transform: translateX(100px);
+                visibility: hidden;
+            }
+            &_like {
+                // width: 75%;
+            }
+        }
+    }
+    &-larger {
+        .product {
+            &_main {
+                width: 100%;
+            }
+            &_detail {
+                &_pic {
+                    padding-bottom: calc(100vh - 100px);
                     width: calc((100vh - 100px) / 0.71);
-                    top: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    margin: 0 auto;
                 }
             }
             &_intro {
                 opacity: 0;
                 transform: translateX(100px);
                 visibility: hidden;
-            }
-            &_like {
-                opacity: 0;
+                width: 0;
             }
         }
     }
     @media screen and (max-width: 1199px) {
         &_main {
-            // width: calc(100% - 305px);
+            width: calc(100% - 305px);
             &_inner {
-                width: calc(100% - 305px);
+                // width: calc(100% - 305px);
             }
         }
         &_intro {
             width: 305px;
         }
         &_like {
-            width: calc(100% - 305px);
+            // width: calc(100% - 305px);
         }
     }
     @media screen and (max-width: 991px) {
         &_main {
             &_inner {
-                position: static;
+                // position: static;
                 width: 100%;
+                
             }
         }
         &_detail {

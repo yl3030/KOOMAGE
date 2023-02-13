@@ -131,26 +131,40 @@
             <div class="product_detail">
                 <div class="product_detail_inner">
                     <div class="product_main">
-                        <div class="product_main_inner">
-                            <div class="product_detail_pic horiSlider">
-                                <div class="swiper-container product_detail_slider">
-                                    <div class="swiper-wrapper">
-                                      <div class="swiper-slide">
-                                        <div class="product_detail_slider_pic">
-                                            <img class="d-lg-block d-none" src="./public/img/B-PA-1.jpg" alt="">
-                                            <img class="d-lg-none" src="./public/img/P-1M_1.jpg" alt="">
-                                        </div>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <div class="product_detail_slider_pic">
-                                            <img class="d-lg-block d-none" src="./public/img/B-PA-2.jpg" alt="">
-                                            <img class="d-lg-none" src="./public/img/P-1M_2.jpg" alt="">
-                                        </div>
-                                      </div>
-                                    </div>     
+                        <div class="product_detail_pic horiSlider d-lg-none">
+                            <div class="swiper-container product_detail_slider">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="product_detail_slider_pic">
+                                        <img class="d-lg-block d-none" src="./public/img/B-PA-1.jpg" alt="">
+                                        <img class="d-lg-none" src="./public/img/P-1M_1.jpg" alt="">
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="product_detail_slider_pic">
+                                        <img class="d-lg-block d-none" src="./public/img/B-PA-2.jpg" alt="">
+                                        <img class="d-lg-none" src="./public/img/P-1M_2.jpg" alt="">
+                                    </div>
+                                  </div>
+                                </div>     
+                            </div>
+                            <div class="product_detail_slider_pagi"></div>
+                            <div class="product_detail_slider_cross"><img src="./public/img/icon-cross.svg" alt=""></div>
+                        </div>
+                        <div class="product_main_inner d-lg-block d-none">
+                            <div class="product_main_slider">
+                                <ul>
+                                    <li class="product_main_item">
+                                        <img class="d-lg-block d-none" src="./public/img/B-PA-1.jpg" alt="">
+                                        <img class="d-lg-none" src="./public/img/P-1M_1.jpg" alt="">
+                                    </li>
+                                    <li class="product_main_item">
+                                        <img class="d-lg-block d-none" src="./public/img/B-PA-2.jpg" alt="">
+                                        <img class="d-lg-none" src="./public/img/P-1M_2.jpg" alt="">
+                                    </li>
+                                </ul>
+                                <div class="product_main_pagi">
                                 </div>
-                                <div class="product_detail_slider_pagi"></div>
-                                <div class="product_detail_slider_cross"><img src="./public/img/icon-cross.svg" alt=""></div>
                             </div>
                         </div>
                         <!-- <img class="product_main_pic d-sm-block d-none" src="./public/img/art-pic-1.png" alt="">
@@ -458,6 +472,8 @@
             loop: true,
             speed: 1000,
             direction: "horizontal",
+            // direction: "vertical",
+            // mousewheel: true,
             observeParents:true,
             observer:true,
             pagination: {
@@ -466,20 +482,61 @@
             },
             breakpoints: {
                 768: {
-                    direction: "vertical",
+                    // direction: "vertical",
                 },
             }
         });
-        $(".product_detail_slider").click(function(){
-            if($(window).width() < 768) {
-                swiper1.slideNext(1000, true)
-            }else {
-                $("main").toggleClass("productBig");
-                swiper1.animating;
-                swiper1.updateSize();
-                // swiper1.update();
+
+        function productSlider() {
+            let sliderNum = $(".product_main_item").length;
+            for (let i = 0; i < sliderNum ; i++) {
+                if( i == 0) {
+                    let productMainDot = $("<div class='product_main_dot active'></div>");
+                    $(".product_main_pagi").append(productMainDot);
+                }else {
+                    let productMainDot = $("<div class='product_main_dot'></div>");
+                    $(".product_main_pagi").append(productMainDot);
+                }
             }
-        });
+        }
+
+        productSlider();
+
+        // $(".product_detail_slider").click(function(){
+        //     if($(window).width() < 768) {
+        //         swiper1.slideNext(1000, true)
+        //     }else {
+        //         $("main").toggleClass("product-larger");
+        //         swiper1.animating;
+        //         swiper1.updateSize();
+        //     }
+        // })
+
+        $(".product_main_slider>ul").on("resize scroll",function(){
+            let scrollTop = $(this).scrollTop();
+            let offsetUnit = Math.floor($(".product_main_item").width() * 0.7073);
+            let num = $(".product_main_item").length;
+            let offset, offsetFrom, offsetTo;
+            for(let i = 0; i < num; i++) {
+                offsetFrom = offsetUnit * i;
+                offsetTo = offsetUnit * (i + 1);
+
+                if(scrollTop >= offsetFrom && scrollTop < offsetTo) {
+                    $(".product_main_dot").eq(i).addClass("active").siblings(".product_main_dot").removeClass("active");
+                }
+                console.log("scrollTop=" + scrollTop + ",offsetUnit=" + offsetUnit + ",num=" + num + ",offsetFrom=" + offsetFrom + ",offsetTo=" + offsetTo);
+            }
+        })
+
+        // $(".product_detail_slider").click(function(){
+        //     if($(window).width() < 768) {
+        //         swiper1.slideNext(1000, true)
+        //     }else {
+        //         $("main").toggleClass("productBig");
+        //         swiper1.animating;
+        //         swiper1.updateSize();
+        //     }
+        // });
 
         var swiper3 = new Swiper(".product_like_slider-m", {
             slidesPerView: 1.5,
@@ -501,6 +558,11 @@
             observer:true,
         });
 
+        $(".product_main_slider").click(function(){
+            $("main").toggleClass("productBig");
+            swiper3.animating;
+            swiper3.updateSize();
+        })
         
 
         

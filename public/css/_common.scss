@@ -135,7 +135,7 @@ input, button {
             background-color: $common-text;
             height: 1px;
             position: absolute;
-            transition: 0.8s;
+            transition: 0.2s;
             &.top {
                 width: 22px;
                 left: 0;
@@ -160,14 +160,14 @@ input, button {
                 left: 50% !important;
                 &.top, &.middle {
                     width: 100%;
-                    transform: translate(-50%, -50%) rotate(45deg);
+                    transform: translate(-50%, -50%) rotate(-45deg);
                 }
                 &.middle {
                     opacity: 0;
                 }
                 &.bottom {
                     width: 100%;
-                    transform: translate(-50%, -50%) rotate(-45deg);
+                    transform: translate(-50%, -50%) rotate(45deg);
                 }
             }
         }
@@ -176,30 +176,20 @@ input, button {
         &_menu {
             &:not(.active) {
                 &:hover {
-                    transition-delay: 0.8s;
+                    transition-delay: 0.2s;
+                    // transition-delay: 1s;
                     transform: rotate(90deg);
                     transform-origin: 10px 10px;
                     .bar {
-                        // &.top {
-                        //     animation: menuBarTop 1s forwards;
-                        // }
-                        // &.middle {
-                        //     animation: menuBarMiddle 1s forwards;
-                        // }
-                        // &.bottom {
-                        //     animation: menuBarBottom 1s forwards;
-                        // }
                         width: 20px;
                         top: 10px;
-                        // top: 50%;
                         left: 0;
-                        // &_inner {
-                        //     transform: rotate(90deg);
-                        //     transition-delay: 0.8s;
-                        // }
-                        // transform: rotate(90deg);
                     }
                 }
+            }
+            &.active {
+                transform: rotate(90deg);
+                transform-origin: 10px 10px;
             }
         }
     }

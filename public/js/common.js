@@ -155,42 +155,35 @@ $(document).click(function (event) {
 });
 
 $(window).on("resize scroll",function(){
-    // let toggleHeight = 300;
-    // if($(window).scrollTop()>toggleHeight) {
-    //     $(".product_detail_slider_pagi").fadeOut();
-    // }else {
-    //     $(".product_detail_slider_pagi").fadeIn();
-    // }
-
     if($(window).scrollTop()>0) {
         $(".sc_list").fadeOut(300);
     }
 })
 
 
-function productPosition() {
-    // like top
-    let productLikeTop = $(".product_detail_slider").height() + 86;
-    $(".product_like").css("top",productLikeTop);
+// function productPosition() {
+//     // like top
+//     let productLikeTop = $(".product_detail_slider").height() + 86;
+//     $(".product_like").css("top",productLikeTop);
 
-    // main高度
-    let leftHeight = $(".product_like").height() + productLikeTop;
-    let rightHeight = $(".product_intro").height();
-    let mainHeight;
-    if(leftHeight > rightHeight) {
-        mainHeight = leftHeight;
-    }else {
-        mainHeight = rightHeight;
-    }
-    $(".product_detail").height(mainHeight + "px");
-}
-if($(window).width() >= 992) {
-    productPosition();
-};
-$(window).on("resize scroll",function(){
-    if($(window).width() >= 992) {
-        productPosition();
-    }else {
-        $(".product_detail").height("auto");
-    }
-});
+//     // main高度
+//     let leftHeight = $(".product_like").height() + productLikeTop;
+//     let rightHeight = $(".product_intro").height();
+//     let mainHeight;
+//     if(leftHeight > rightHeight) {
+//         mainHeight = leftHeight;
+//     }else {
+//         mainHeight = rightHeight;
+//     }
+//     $(".product_detail").height(mainHeight + "px");
+// }
+// if($(window).width() >= 992) {
+//     productPosition();
+// };
+// $(window).on("resize scroll",function(){
+//     if($(window).width() >= 992) {
+//         productPosition();
+//     }else {
+//         $(".product_detail").height("auto");
+//     }
+// });
