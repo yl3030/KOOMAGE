@@ -92,6 +92,39 @@ $(".product_intro_change li").click(function(){
     $(this).parents(".product_intro_change_list").slideUp(300);
 })
 
+function intro(){
+    $(window).on("resize scroll",function(){
+        if($(window).width()>=1100) {
+            let likeTop = $(".product_like").offset().top;
+            let windowHeight = $(window).height();
+            let toggleTop = likeTop - windowHeight;
+            let mainHeight = $(".product_main").height();
+            let introHeight = $(".product_intro").height() + 100;
+            let scHeight = $(".sc").height();
+            let newTop = scHeight + mainHeight - introHeight + 20;
+            if($(window).scrollTop() > toggleTop) {
+                $(".product_intro").addClass("scroll");
+                $(".product_intro").css("top",newTop);
+            }else {
+                $(".product_intro").removeClass("scroll");
+                $(".product_intro").css("top",scHeight);
+            }
+        }
+    })
+}
+intro();
+
+$(".product_main_slider").click(function(){
+    $(this).toggleClass("active");
+    $(".product_intro").fadeToggle(300);
+})
+
+$(".product_info_item").click(function(){
+    $(this).find(".product_spec_icon").toggleClass("active");
+    $(this).parents(".product_info_li").find(".product_info_hide").slideToggle(300);
+    intro();
+})
+
 $(".product_spec_item").click(function(){
     $(this).parents(".product_spec_li").find(".product_spec_list").slideToggle(300);
     $(this).find(".product_spec_icon").toggleClass("active");
