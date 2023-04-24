@@ -128,76 +128,254 @@
             <span class="ca">CA</span>
         </p>
         <main class="">
-            <div class="product_detail">
-                <div class="product_detail_inner">
-                    <div class="product_main">
-                        <div class="product_detail_pic horiSlider d-lg-none">
-                            <div class="swiper-container product_detail_slider">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <div class="product_detail_slider_pic">
-                                        <img class="d-lg-block d-none" src="./public/img/B-PA-1.jpg" alt="">
-                                        <img class="d-lg-none" src="./public/img/P-1M_1.jpg" alt="">
-                                    </div>
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <div class="product_detail_slider_pic">
-                                        <img class="d-lg-block d-none" src="./public/img/B-PA-2.jpg" alt="">
-                                        <img class="d-lg-none" src="./public/img/P-1M_2.jpg" alt="">
-                                    </div>
-                                  </div>
-                                </div>     
-                            </div>
-                            <div class="product_detail_slider_pagi"></div>
-                            <div class="product_detail_slider_cross"><img src="./public/img/icon-cross.svg" alt=""></div>
+            <div class="product_main">
+                <div id="productCarouselControls" class="carousel slide product_main_slider" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#productCarouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#productCarouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="product_main_item">
+                            <img class="d-lg-block d-none" src="./public/img/B-PA-1.jpg" alt="">
+                            <img class="d-lg-none" src="./public/img/P-1M_1.jpg" alt="">
                         </div>
-                        <div class="product_main_inner d-lg-block d-none">
-                            <div class="product_main_slider">
-                                <ul>
-                                    <li class="product_main_item">
-                                        <img class="d-lg-block d-none" src="./public/img/B-PA-1.jpg" alt="">
-                                        <img class="d-lg-none" src="./public/img/P-1M_1.jpg" alt="">
-                                    </li>
-                                    <li class="product_main_item">
-                                        <img class="d-lg-block d-none" src="./public/img/B-PA-2.jpg" alt="">
-                                        <img class="d-lg-none" src="./public/img/P-1M_2.jpg" alt="">
-                                    </li>
-                                </ul>
-                                <div class="product_main_pagi">
-                                </div>
-                            </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="product_main_item">
+                            <img class="d-lg-block d-none" src="./public/img/B-PA-2.jpg" alt="">
+                            <img class="d-lg-none" src="./public/img/P-1M_2.jpg" alt="">
                         </div>
-                        <!-- <img class="product_main_pic d-sm-block d-none" src="./public/img/art-pic-1.png" alt="">
-                        <div class="product_main_pic-m d-sm-none d-block"><img src="./public/img/art-pic-m.png" alt=""></div> -->
-                        <div class="d-lg-block d-none product_like">
-                            <h2 class="title-common">YOU MAY ALSO LIKE</h2>
-                            <div class="swiper-container product_like_slider product_like_slider-pc">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <a href="./product-detail-2.html" class="product_like_pic">
-                                        <img src="./public/img/product-1.png" alt="">
-                                    </a>
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <a href="./product-detail-2.html" class="product_like_pic">
-                                        <img src="./public/img/product-2.png" alt="">
-                                    </a>
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <a href="./product-detail-2.html" class="product_like_pic">
-                                        <img src="./public/img/product-3.png" alt="">
-                                    </a>
-                                  </div>
-                                </div>     
-                            </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="product_intro">
+                    <div class="product_intro_title d-flex justify-content-between align-items-end">
+                        <div>
+                            <p>title</p>
+                            <h1>KO #02</h1>
+                        </div>
+                        <div class="collect">
+                            <div class="collect_text">add to collection</div>
+                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_38_6)">
+                                <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_38_6">
+                                <rect width="14.12" height="12.48" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
                         </div>
                     </div>
-                    <div class="product_intro">
-                        <div class="product_intro_title d-flex justify-content-between align-items-end">
-                            <div>
-                                <p>title</p>
-                                <h1>KO #02</h1>
+                    <div class="product_change">
+                        <div class="d-flex align-items-end justify-content-end product_intro_price">
+                            <span class="unit">CA$</span>
+                            <span class="product_change_price"> 250.00</span>
+                        </div>
+                        <div class="product_intro_change">
+                            <div class="product_intro_change_title">change currency</div>
+                            <ul class="product_intro_change_list">
+                                <li>AUD</li>
+                                <li>CAD</li>
+                                <li>EUR</li>
+                                <li>GBP</li>
+                                <li>HKD</li>
+                                <li>JPY</li>
+                                <li>NZD</li>
+                                <li>RMB</li>
+                                <li>SGD</li>
+                                <li>USD</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn-addtocart">
+                        <div class="btn-addtocart_bg"></div>
+                        <span>ADD TO CART</span>
+                    </button>
+                    <ul class="product_spec">
+                        <li class="product_spec_li">
+                            <div class="product_spec_item">
+                                <span class="product_spec_item_left">select size</span>
+                                <div class="product_spec_item_right">
+                                    <p class="product_spec_chosen m-0 me-1"></p>
+                                    <div class="product_spec_icon">
+                                        <div class="bar vert"></div>
+                                        <div class="bar hori"></div>
+                                    </div>
+                                </div>
                             </div>
+                            <ul class="product_spec_list">
+                                <li class="product_spec_list_item" data-price="290"><span>W88cm*H60cm</span></li>
+                                <li class="product_spec_list_item" data-price="240"><span>W70cm*H48cm</span></li>
+                                <li class="product_spec_list_item" data-price="180"><span>W54cm*H37cm</span></li>
+                                <li class="product_spec_list_item" data-price="120"><span>W35cm*H24cm</span></li>
+                            </ul>
+                        </li>
+                        <li class="product_spec_li">
+                            <div class="product_spec_item">
+                                <span class="product_spec_item_left">select mounting</span>
+                                <div class="product_spec_item_right">
+                                    <p class="product_spec_chosen m-0 me-1"></p>
+                                    <div class="product_spec_icon">
+                                        <div class="bar vert"></div>
+                                        <div class="bar hori"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_spec_list">
+                                <li class="product_spec_list_item"><span>No Mounting</span></li>
+                                <li class="product_spec_list_item"><span>3/16” UltraMount</span></li>
+                                <li class="product_spec_list_item"><span>Alupanel (Dibond)</span></li>
+                            </ul>
+                        </li>
+                        <li class="product_spec_li">
+                            <div class="product_spec_item">
+                                <span class="product_spec_item_left">select frame</span>
+                                <div class="product_spec_item_right">
+                                    <p class="product_spec_chosen m-0 me-1"></p>
+                                    <div class="product_spec_icon">
+                                        <div class="bar vert"></div>
+                                        <div class="bar hori"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_spec_list frame">
+                                <li class="product_spec_list_item"><span>No Frame</span></li>
+                                <li class="product_spec_list_item">
+                                    <span>Oak Nature Frame</span>
+                                    <div class="product_spec_list_pic">
+                                        <div class="product_spec_list_pic_inner">
+                                            <img src="./public/img/frame_Oak.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product_spec_list_item">
+                                    <span>White Alu Frame</span>
+                                    <div class="product_spec_list_pic">
+                                        <div class="product_spec_list_pic_inner">
+                                            <img src="./public/img/frame_Alu_White.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product_spec_list_item">
+                                    <span>Brass Alu Frame</span>
+                                    <div class="product_spec_list_pic">
+                                        <div class="product_spec_list_pic_inner">
+                                            <img src="./public/img/frame_Alu_Brass.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product_spec_list_item">
+                                    <span>Beige Wood Frame</span>
+                                    <div class="product_spec_list_pic">
+                                        <div class="product_spec_list_pic_inner">
+                                            <img src="./public/img/frame_Beige_Wood.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product_spec_list_item">
+                                    <span>White Wood Frame</span>
+                                    <div class="product_spec_list_pic">
+                                        <div class="product_spec_list_pic_inner">
+                                            <img src="./public/img/frame_White_Wood.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="product_spec_list_item">
+                                    <span>Black Wood Frame</span>
+                                    <div class="product_spec_list_pic">
+                                        <div class="product_spec_list_pic_inner">
+                                            <img src="./public/img/frame_Black_Wood.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="product_intro_text">
+                        We use Hahnemuhle Photo Rag® 308 paper which is a white, 100% cotton paper with a smooth surface texture. This paper is for display purposes and exhibitions. With its premium matt inkjet coating Photo Rag meets the highest industry standards regarding density, colour gamut, colour graduation and image sharpness.
+                    </p>
+                </div>
+                <ul class="product_info">
+                    <li class="product_info_li">
+                        <div class="product_info_item">
+                            <span class="product_info_item_left">frame description</span>
+                            <div class="product_spec_icon">
+                                <div class="bar vert"></div>
+                                <div class="bar hori"></div>
+                            </div>
+                        </div>
+                        <div class="product_info_hide">
+                            <p>International delivery via DHL.</p>
+                            <p>We dispatch all orders within 7-9 business days.</p>
+                            <p>Canada 1-2 business days, </p>
+                            <p>US 2-3 business days, </p>
+                            <p>Europe 3-5 business days, </p>
+                            <p>Asina 4-7 business days, </p>
+                            <p>Rest of the world 5-9 business days </p>
+                            <p>Some countries, remote cities, or islands may have </p>
+                            <p>longer delivery times.</p>
+                        </div>
+                    </li>
+                    <li class="product_info_li">
+                        <div class="product_info_item">
+                            <span class="product_info_item_left">shipping information</span>
+                            <div class="product_spec_icon">
+                                <div class="bar vert"></div>
+                                <div class="bar hori"></div>
+                            </div>
+                        </div>
+                        <div class="product_info_hide">
+                            <p>International delivery via DHL. We dispatch all orders within 7-9 business days</p>
+                            <p>Canada 1-2 business days, US 2-3 business days, Eroupe 3-5 business days, Asia 4-7 business days, Rest of the world 5-9 business days</p>
+                            <p>Some countries, remote cities, or islands may have longer deliver times.</p>
+                        </div>
+                    </li>
+                    <li class="product_info_li">
+                        <div class="product_info_item">
+                            <span class="product_info_item_left">refund policy</span>
+                            <div class="product_spec_icon">
+                                <div class="bar vert"></div>
+                                <div class="bar hori"></div>
+                            </div>
+                        </div>
+                        <div class="product_info_hide">
+                            <p>International delivery via DHL. We dispatch all orders within 7-9 business days</p>
+                            <p>Canada 1-2 business days, US 2-3 business days, Eroupe 3-5 business days, Asia 4-7 business days, Rest of the world 5-9 business days</p>
+                            <p>Some countries, remote cities, or islands may have longer deliver times.</p>
+                        </div>
+                    </li>
+                    <li class="product_info_li">
+                        <div class="product_info_item">
+                            <span class="product_info_item_left">size description</span>
+                            <div class="product_spec_icon">
+                                <div class="bar vert"></div>
+                                <div class="bar hori"></div>
+                            </div>
+                        </div>
+                        <div class="product_info_hide">
+                            <p>International delivery via DHL. We dispatch all orders within 7-9 business days</p>
+                            <p>Canada 1-2 business days, US 2-3 business days, Eroupe 3-5 business days, Asia 4-7 business days, Rest of the world 5-9 business days</p>
+                            <p>Some countries, remote cities, or islands may have longer deliver times.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="product_like product-list">
+                <h2 class="title-common">YOU MAY ALSO LIKE</h2>
+                <div class="swiper-container product_like_slider-m">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/2-1.jpg" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
                             <div class="collect">
                                 <div class="collect_text">add to collection</div>
                                 <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,181 +390,102 @@
                                 </svg>
                             </div>
                         </div>
-                        <p class="product_intro_text">
-                            We use Hahnemuhle Photo Rag® 308 paper which is a white, 100% cotton paper with a smooth surface texture. This paper is for display purposes and exhibitions. With its premium matt inkjet coating Photo Rag meets the highest industry standards regarding density, colour gamut, colour graduation and image sharpness.
-                        </p>
-                        <div class="product_change">
-                            <div class="d-flex align-items-end justify-content-end product_intro_price">
-                                <span class="unit">CA$</span>
-                                <span class="product_change_price"> 250.00</span>
-                            </div>
-                            <div class="product_intro_change">
-                                <div class="product_intro_change_title">change currency</div>
-                                <ul class="product_intro_change_list">
-                                    <li>AUD</li>
-                                    <li>CAD</li>
-                                    <li>EUR</li>
-                                    <li>GBP</li>
-                                    <li>HKD</li>
-                                    <li>JPY</li>
-                                    <li>NZD</li>
-                                    <li>RMB</li>
-                                    <li>SGD</li>
-                                    <li>USD</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <ul class="product_spec">
-                            <li class="product_spec_li">
-                                <div class="product_spec_item">
-                                    <span class="product_spec_item_left">select size</span>
-                                    <div class="product_spec_item_right">
-                                        <p class="product_spec_chosen m-0 me-1"></p>
-                                        <div class="product_spec_icon">
-                                            <div class="bar vert"></div>
-                                            <div class="bar hori"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="product_spec_list">
-                                    <li class="product_spec_list_item" data-price="290"><span>W88cm*H60cm</span></li>
-                                    <li class="product_spec_list_item" data-price="240"><span>W70cm*H48cm</span></li>
-                                    <li class="product_spec_list_item" data-price="180"><span>W54cm*H37cm</span></li>
-                                    <li class="product_spec_list_item" data-price="120"><span>W35cm*H24cm</span></li>
-                                </ul>
-                            </li>
-                            <li class="product_spec_li">
-                                <div class="product_spec_item">
-                                    <span class="product_spec_item_left">select mounting</span>
-                                    <div class="product_spec_item_right">
-                                        <p class="product_spec_chosen m-0 me-1"></p>
-                                        <div class="product_spec_icon">
-                                            <div class="bar vert"></div>
-                                            <div class="bar hori"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="product_spec_list">
-                                    <li class="product_spec_list_item"><span>No Mounting</span></li>
-                                    <li class="product_spec_list_item"><span>3/16” UltraMount</span></li>
-                                    <li class="product_spec_list_item"><span>Alupanel (Dibond)</span></li>
-                                </ul>
-                            </li>
-                            <li class="product_spec_li">
-                                <div class="product_spec_item">
-                                    <span class="product_spec_item_left">select frame</span>
-                                    <div class="product_spec_item_right">
-                                        <p class="product_spec_chosen m-0 me-1"></p>
-                                        <div class="product_spec_icon">
-                                            <div class="bar vert"></div>
-                                            <div class="bar hori"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="product_spec_list frame">
-                                    <li class="product_spec_list_item"><span>No Frame</span></li>
-                                    <li class="product_spec_list_item">
-                                        <span>Oak Nature Frame</span>
-                                        <div class="product_spec_list_pic">
-                                            <div class="product_spec_list_pic_inner">
-                                                <img src="./public/img/frame_Oak.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product_spec_list_item">
-                                        <span>White Alu Frame</span>
-                                        <div class="product_spec_list_pic">
-                                            <div class="product_spec_list_pic_inner">
-                                                <img src="./public/img/frame_Alu_White.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product_spec_list_item">
-                                        <span>Brass Alu Frame</span>
-                                        <div class="product_spec_list_pic">
-                                            <div class="product_spec_list_pic_inner">
-                                                <img src="./public/img/frame_Alu_Brass.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product_spec_list_item">
-                                        <span>Beige Wood Frame</span>
-                                        <div class="product_spec_list_pic">
-                                            <div class="product_spec_list_pic_inner">
-                                                <img src="./public/img/frame_Beige_Wood.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product_spec_list_item">
-                                        <span>White Wood Frame</span>
-                                        <div class="product_spec_list_pic">
-                                            <div class="product_spec_list_pic_inner">
-                                                <img src="./public/img/frame_White_Wood.jpeg" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="product_spec_list_item">
-                                        <span>Black Wood Frame</span>
-                                        <div class="product_spec_list_pic">
-                                            <div class="product_spec_list_pic_inner">
-                                                <img src="./public/img/frame_Black_Wood.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <button class="btn-addtocart">
-                            <div class="btn-addtocart_bg"></div>
-                            <span>ADD TO CART</span>
-                        </button>
-                        <div class="product_tab">
-                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link active" id="pills-frame-tab" data-bs-toggle="pill" data-bs-target="#pills-frame" type="button" role="tab" aria-controls="pills-frame" aria-selected="true">frame describtion</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="pills-shipping-tab" data-bs-toggle="pill" data-bs-target="#pills-shipping" type="button" role="tab" aria-controls="pills-shipping" aria-selected="false">shipping information</button>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-frame" role="tabpanel" aria-labelledby="pills-frame-tab">  
-                                    <p>International delivery via DHL.</p>
-                                    <p>We dispatch all orders within 7-9 business days.</p>
-                                    <p>Canada 1-2 business days, </p>
-                                    <p>US 2-3 business days, </p>
-                                    <p>Europe 3-5 business days, </p>
-                                    <p>Asina 4-7 business days, </p>
-                                    <p>Rest of the world 5-9 business days </p>
-                                    <p>Some countries, remote cities, or islands may have </p>
-                                    <p>longer delivery times.</p>
-                                </div>
-                                <div class="tab-pane fade" id="pills-shipping" role="tabpanel" aria-labelledby="pills-shipping-tab">
-                                    <p>International delivery via DHL.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-lg-none d-block product_like">
-                <h2 class="title-common">YOU MAY ALSO LIKE</h2>
-                <div class="swiper-container product_like_slider-m">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <a href="./product-detail-2.html" class="product_like_pic">
-                            <img src="./public/img/product-1.png" alt="">
-                        </a>
                       </div>
                       <div class="swiper-slide">
-                        <a href="./product-detail-2.html" class="product_like_pic">
-                            <img src="./public/img/product-2.png" alt="">
-                        </a>
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/1-2.jpg" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
                       </div>
                       <div class="swiper-slide">
-                        <a href="./product-detail-2.html" class="product_like_pic">
-                            <img src="./public/img/product-3.png" alt="">
-                        </a>
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/1-1.jpg" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/2-3.jpg" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product-list_item">
+                            <a href="./product-detail-1.html">
+                                <div class="product-list_pic"><img src="./public/img/2-4.jpg" alt=""></div>
+                                <div class="product-list_text">
+                                    <h4>Title: Life is White</h4>
+                                    <p>CAD 200+</p>
+                                </div>
+                            </a>
+                            <div class="collect">
+                                <div class="collect_text">add to collection</div>
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_38_6)">
+                                    <path d="M12.74 1.38994C11.39 0.0399414 9.2 0.0399414 7.86 1.38994L7.06 2.17994L6.27 1.38994C4.92 0.0399414 2.73 0.0399414 1.39 1.38994C0.0400025 2.73994 0.0400025 4.92994 1.39 6.26994L2.18 7.05994L7.06 11.9399L11.94 7.05994L12.73 6.26994C14.09 4.91994 14.09 2.72994 12.74 1.38994Z" stroke="#808080" stroke-width="0.75" stroke-miterlimit="10"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_38_6">
+                                    <rect width="14.12" height="12.48" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
                       </div>
                     </div>     
                 </div>
@@ -467,102 +566,24 @@
     <script src="./public/js/common.js"></script>
 
     <script>
-        var swiper1 = new Swiper(".product_detail_slider", {
-            slidesPerView: 1,
-            loop: true,
-            speed: 1000,
-            direction: "horizontal",
-            // direction: "vertical",
-            // mousewheel: true,
-            observeParents:true,
-            observer:true,
-            pagination: {
-                el: ".product_detail_slider_pagi",
-                clickable: true,
-            },
-            breakpoints: {
-                768: {
-                    // direction: "vertical",
-                },
-            }
-        });
 
-        function productSlider() {
-            let sliderNum = $(".product_main_item").length;
-            for (let i = 0; i < sliderNum ; i++) {
-                if( i == 0) {
-                    let productMainDot = $("<div class='product_main_dot active'></div>");
-                    $(".product_main_pagi").append(productMainDot);
-                }else {
-                    let productMainDot = $("<div class='product_main_dot'></div>");
-                    $(".product_main_pagi").append(productMainDot);
-                }
-            }
-        }
 
-        productSlider();
-
-        // $(".product_detail_slider").click(function(){
-        //     if($(window).width() < 768) {
-        //         swiper1.slideNext(1000, true)
-        //     }else {
-        //         $("main").toggleClass("product-larger");
-        //         swiper1.animating;
-        //         swiper1.updateSize();
-        //     }
-        // })
-
-        $(".product_main_slider>ul").on("resize scroll",function(){
-            let scrollTop = $(this).scrollTop();
-            let offsetUnit = Math.floor($(".product_main_item").width() * 0.7073);
-            let num = $(".product_main_item").length;
-            let offset, offsetFrom, offsetTo;
-            for(let i = 0; i < num; i++) {
-                offsetFrom = offsetUnit * i;
-                offsetTo = offsetUnit * (i + 1);
-
-                if(scrollTop >= offsetFrom && scrollTop < offsetTo) {
-                    $(".product_main_dot").eq(i).addClass("active").siblings(".product_main_dot").removeClass("active");
-                }
-                console.log("scrollTop=" + scrollTop + ",offsetUnit=" + offsetUnit + ",num=" + num + ",offsetFrom=" + offsetFrom + ",offsetTo=" + offsetTo);
-            }
-        })
-
-        // $(".product_detail_slider").click(function(){
-        //     if($(window).width() < 768) {
-        //         swiper1.slideNext(1000, true)
-        //     }else {
-        //         $("main").toggleClass("productBig");
-        //         swiper1.animating;
-        //         swiper1.updateSize();
-        //     }
-        // });
 
         var swiper3 = new Swiper(".product_like_slider-m", {
-            slidesPerView: 1.5,
+            slidesPerView: 2,
             speed: 1000,
             spaceBetween: 13,
             observeParents:true,
             observer:true,
             breakpoints: {
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 3,
+                },
+                1100: {
+                    slidesPerView: 4,
                 },
             }
         });
-        var swiper2 = new Swiper(".product_like_slider-pc", {
-            slidesPerView: 3,
-            speed: 1000,
-            spaceBetween: 13,
-            observeParents:true,
-            observer:true,
-        });
-
-        $(".product_main_slider").click(function(){
-            $("main").toggleClass("productBig");
-            swiper3.animating;
-            swiper3.updateSize();
-        })
         
 
         
