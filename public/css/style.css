@@ -1741,16 +1741,21 @@ body.noscroll {
   left: 0;
 }
 
+.product-list_text {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
 .product-list_text h4 {
   font-family: PostGroteskBook;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   margin-bottom: 6px;
 }
 
 .product-list_text p {
   font-family: PostGroteskLight;
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
 }
 
@@ -1808,6 +1813,7 @@ body.noscroll {
 
 .product_main {
   padding-right: 28px;
+  position: relative;
 }
 
 .product_main_pic {
@@ -1878,7 +1884,80 @@ body.noscroll {
 }
 
 .product_main_slider.active {
+  width: calc(100% - 115px);
+}
+
+.product_main_slider.active .carousel-control-next, .product_main_slider.active .carousel-control-prev {
+  width: calc(50% + 130px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 50%;
+  opacity: 0;
+}
+
+.product_main_slider.active .carousel-control-next:hover, .product_main_slider.active .carousel-control-prev:hover {
+  opacity: 1;
+}
+
+.product_main_slider.active .carousel-control-next {
+  right: -130px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.product_main_slider.active .carousel-control-prev {
+  left: -130px;
+  right: inherit;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.product_main_slider.active .carousel-control-next-icon, .product_main_slider.active .carousel-control-prev-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.product_main_slider.active .carousel-control-next-icon {
+  background-image: url(../img/slider-arrow-right-long.svg);
+}
+
+.product_main_slider.active .carousel-control-prev-icon {
+  background-image: url(../img/slider-arrow-left-long.svg);
+}
+
+.product_main_slider .carousel-control-next, .product_main_slider .carousel-control-prev {
+  width: 22px;
+  height: 22px;
+  opacity: 1;
+  top: calc(100% + 5px);
+}
+
+.product_main_slider .carousel-control-next {
+  right: 0;
+}
+
+.product_main_slider .carousel-control-prev {
+  left: inherit;
+  right: 50px;
+}
+
+.product_main_slider .carousel-control-next-icon, .product_main_slider .carousel-control-prev-icon {
   width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product_main_slider .carousel-control-next-icon {
+  background-image: url(../img/slider-arrow-right.svg);
+}
+
+.product_main_slider .carousel-control-prev-icon {
+  background-image: url(../img/slider-arrow-left.svg);
 }
 
 .product_main_item {
@@ -2096,10 +2175,14 @@ body.noscroll {
   font-family: PostGroteskLight;
   font-size: 12px;
   padding-top: 10vw;
+  margin: 0;
 }
 
 .product_intro.scroll {
   position: absolute;
+  width: calc((100% - 28px) * 0.25);
+  top: inherit;
+  bottom: 0;
 }
 
 .product-swiper_pic {
@@ -2654,6 +2737,9 @@ body.noscroll {
 }
 
 @media screen and (max-width: 991px) {
+  .product_main {
+    padding-right: 28px;
+  }
   .product_main_inner {
     width: 100%;
   }
@@ -2665,9 +2751,43 @@ body.noscroll {
   .product_intro {
     padding: 0;
     position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .product_intro_text {
     margin-bottom: 15px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .product_intro_title {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .product_intro .product_change {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .product_intro .btn-addtocart {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .product_intro .product_spec {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+    margin-bottom: 0;
+  }
+  .product_intro .product_spec > li:last-child::after {
+    background-image: none;
   }
   .product_spec {
     margin-bottom: 49px;
@@ -2676,7 +2796,7 @@ body.noscroll {
     margin-bottom: 50px;
   }
   .product_like {
-    padding-right: 43px;
+    padding-right: 28px;
     position: static;
     width: 100%;
   }
@@ -2712,8 +2832,21 @@ body.noscroll {
     width: 50%;
     margin: 0;
   }
+  .product_main {
+    padding-right: 0;
+  }
   .product_main_slider .carousel-indicators {
     padding-left: 44px;
+  }
+  .product_main_item img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .product_main .carousel-control-prev {
+    right: 94px;
+  }
+  .product_main .carousel-control-next {
+    right: 44px;
   }
 }
 
@@ -2775,16 +2908,15 @@ body.noscroll {
           transform-origin: center;
 }
 
-@media screen and (max-width) {
+@media screen and (max-width: 767px) {
   .btn-addtocart {
-    margin-bottom: 49px;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 991px) {
   .product_main {
     width: 100%;
-    padding-right: 0;
   }
   .product_intro {
     width: 100%;

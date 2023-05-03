@@ -12,7 +12,6 @@ $(".product_spec_item>li").click(function(){
     if(!$(this).parents(".product_spec_item").hasClass("single-item")){
         $(this).toggleClass("active").siblings("li").removeClass("active");
     }
-   
 })
 
 $(".menu_second_account").click(function(){
@@ -21,7 +20,6 @@ $(".menu_second_account").click(function(){
     }else {
         $(this).parents(".menu_second_item").find(".menu_third-m").slideToggle(300);
     }
-    
 })
 $(".menu_third_a").click(function(){
     $(this).toggleClass("active");
@@ -93,30 +91,43 @@ $(".product_intro_change li").click(function(){
 })
 
 function intro(){
-    $(window).on("resize scroll",function(){
-        if($(window).width()>=1100) {
-            let likeTop = $(".product_like").offset().top;
-            let windowHeight = $(window).height();
-            let toggleTop = likeTop - windowHeight;
-            let mainHeight = $(".product_main").height();
-            let introHeight = $(".product_intro").height() + 100;
-            let scHeight = $(".sc").height();
-            let newTop = scHeight + mainHeight - introHeight + 20;
-            if($(window).scrollTop() > toggleTop) {
-                $(".product_intro").addClass("scroll");
-                $(".product_intro").css("top",newTop);
-            }else {
-                $(".product_intro").removeClass("scroll");
-                $(".product_intro").css("top",scHeight);
-            }
+    if($(window).width()>=1100) {
+        let likeTop = $(".product_like").offset().top;
+        let windowHeight = $(window).height();
+        let toggleTop = likeTop - windowHeight;
+        let mainHeight = $(".product_main").height();
+        let introHeight = $(".product_intro").height() + 100;
+        let scHeight = $(".sc").height();
+        let newTop = scHeight + mainHeight - introHeight + 20;
+        if($(window).scrollTop() > toggleTop) {
+            $(".product_intro").addClass("scroll");
+        }else {
+            $(".product_intro").removeClass("scroll");
         }
-    })
+    }
 }
 intro();
 
-$(".product_main_slider").click(function(){
-    $(this).toggleClass("active");
-    $(".product_intro").fadeToggle(300);
+$(".product_main_slider .carousel-inner").click(function(){
+    if($(window).width() > 991) {
+        $(this).parents(".product_main_slider").toggleClass("active");
+        $(".product_info").fadeToggle(300);
+        $(".product_like.product-list").fadeToggle(300);
+        if($(this).parents(".product_main_slider").hasClass("active")) {
+            $(".product_intro").fadeOut(300);
+        }else {
+            $(".product_intro").delay(350).fadeIn(300);
+        }
+    }
+})
+
+$(window).on("resize scroll",function(){
+    if($(window).width() <= 991) {
+        $(".product_main_slider").removeClass("active");
+        $(".product_info").fadeIn(300);
+        $(".product_like.product-list").fadeIn(300);
+        $(".product_intro").fadeIn(300);
+    }
 })
 
 $(".product_info_item").click(function(){
@@ -162,12 +173,6 @@ $(".product_spec_list_item").click(function(){
         $(this).parents(".product_spec_li").find(".product_spec_chosen").text(spec);
     }
 })
-// $(".product_spec_list_item").mouseover(function(){
-//     $(this).find(".product_spec_list_pic").slideDown(300);
-// })
-// $(".product_spec_list_item").mouseleave(function(){
-//     $(this).find(".product_spec_list_pic").slideUp(300);
-// })
 
 
 $(document).click(function (event) {
@@ -188,35 +193,8 @@ $(document).click(function (event) {
 });
 
 $(window).on("resize scroll",function(){
+    intro();
     if($(window).scrollTop()>0) {
         $(".sc_list").fadeOut(300);
     }
 })
-
-
-// function productPosition() {
-//     // like top
-//     let productLikeTop = $(".product_detail_slider").height() + 86;
-//     $(".product_like").css("top",productLikeTop);
-
-//     // main高度
-//     let leftHeight = $(".product_like").height() + productLikeTop;
-//     let rightHeight = $(".product_intro").height();
-//     let mainHeight;
-//     if(leftHeight > rightHeight) {
-//         mainHeight = leftHeight;
-//     }else {
-//         mainHeight = rightHeight;
-//     }
-//     $(".product_detail").height(mainHeight + "px");
-// }
-// if($(window).width() >= 992) {
-//     productPosition();
-// };
-// $(window).on("resize scroll",function(){
-//     if($(window).width() >= 992) {
-//         productPosition();
-//     }else {
-//         $(".product_detail").height("auto");
-//     }
-// });
