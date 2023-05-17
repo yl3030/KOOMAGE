@@ -94,15 +94,20 @@ function intro(){
     if($(window).width()>=1100) {
         let likeTop = $(".product_like").offset().top;
         let windowHeight = $(window).height();
-        let toggleTop = likeTop - windowHeight;
+        let toggleTop = likeTop - windowHeight - 10;
+        let introHeight = $(".product_intro").height();
         let mainHeight = $(".product_main").height();
-        let introHeight = $(".product_intro").height() + 100;
-        let scHeight = $(".sc").height();
-        let newTop = scHeight + mainHeight - introHeight + 20;
+        let newTop = mainHeight - introHeight;
+        // let mainHeight = $(".product_main").height();
+        // let introHeight = $(".product_intro").height() + 100;
+        // let scHeight = $(".sc").height();
+        // let newTop = scHeight + mainHeight - introHeight + 20;
         if($(window).scrollTop() > toggleTop) {
             $(".product_intro").addClass("scroll");
+            // $(".product_intro").css("top",newTop);
         }else {
             $(".product_intro").removeClass("scroll");
+            // $(".product_intro").css("top","150px");
         }
     }
 }
@@ -121,6 +126,13 @@ $(".product_main_slider .carousel-inner").click(function(){
     }
 })
 
+$(".product_main_close").click(function(){
+    $(".product_main_slider").removeClass("active");
+    $(".product_info").fadeIn(300);
+    $(".product_like.product-list").fadeIn(300);
+    $(".product_intro").delay(350).fadeIn(300);
+})
+
 $(window).on("resize scroll",function(){
     if($(window).width() <= 991) {
         $(".product_main_slider").removeClass("active");
@@ -131,8 +143,15 @@ $(window).on("resize scroll",function(){
 })
 
 $(".product_info_item").click(function(){
-    $(this).find(".product_spec_icon").toggleClass("active");
-    $(this).parents(".product_info_li").find(".product_info_hide").slideToggle(300);
+    if($(this).find(".product_spec_icon").hasClass("active")) {
+        $(this).find(".product_spec_icon").removeClass("active");
+        $(this).parents(".product_info_li").find(".product_info_hide").slideUp(300);
+    }else {
+        $(this).find(".product_spec_icon").addClass("active");
+        $(this).parents(".product_info_li").find(".product_info_hide").slideDown(300);
+        $(this).parents(".product_info_li").siblings(".product_info_li").find(".product_spec_icon").removeClass("active");
+        $(this).parents(".product_info_li").siblings(".product_info_li").find(".product_info_hide").slideUp(300);
+    }
     intro();
 })
 
