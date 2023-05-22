@@ -2760,6 +2760,9 @@ body.noscroll {
   .product_main_inner {
     width: 100%;
   }
+  .product_main_item {
+    padding-bottom: 119%;
+  }
   .product_detail_pic {
     margin-bottom: 44px;
     padding-bottom: 119% !important;
@@ -2805,13 +2808,11 @@ body.noscroll {
   .product_spec {
     margin-bottom: 49px;
   }
-  .product_tab {
-    margin-bottom: 50px;
-  }
   .product_like {
     padding-right: 28px;
     position: static;
     width: 100%;
+    margin-top: 136px;
   }
 }
 

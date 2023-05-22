@@ -899,6 +899,9 @@
                 width: 100%;
                 
             }
+            &_item {
+                padding-bottom: 119%;
+            }
         }
         &_detail {
             &_pic {
@@ -941,12 +944,13 @@
             margin-bottom: 49px;
         }
         &_tab {
-            margin-bottom: 50px;
+            // margin-bottom: 136px;
         }
         &_like {
             padding-right: 28px;
             position: static;
             width: 100%;
+            margin-top: 136px;
         }
     }
     @media screen and (max-width: 767px) {
